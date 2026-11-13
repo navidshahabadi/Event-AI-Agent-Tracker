@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Americas Event Speaker & Attendee Tracker</title>
+<style>
+:root {
+  --blue:#0070F2; --dark:#1C2B39; --green:#30914C; --orange:#E76500;
+  --red:#BB0000; --purple:#6A2693; --gray:#556B82; --bg:#F5F6F7;
+  --white:#FFFFFF; --border:#D5DADD; --text:#32363A; --muted:#6A7177;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+     background:var(--bg);color:var(--text);font-size:14px}
+
+/* ── HEADER ── */
+.hdr{background:var(--dark);color:#fff;display:flex;align-items:center;
+     padding:0 24px;height:52px;gap:16px}
+.sap-logo{background:#007DB8;font-weight:900;font-size:13px;padding:4px 8px;
+           border-radius:3px;letter-spacing:1px;flex-shrink:0}
+.hdr-title{font-size:16px;font-weight:600;flex:1}
+.hdr-label{font-size:12px;color:#AAB7C1;white-space:nowrap}
+.hdr-sel{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+          color:#fff;padding:6px 12px;border-radius:4px;font-size:13px;
+          cursor:pointer;min-width:150px}
+
+/* ── TABS ── */
+.tabs{background:#fff;border-bottom:1px solid var(--border);
+      display:flex;padding:0 24px;gap:0;position:sticky;top:0;z-index:10}
+.tab{padding:14px 20px;cursor:pointer;font-size:14px;color:var(--gray);
+     border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.tab:hover{color:var(--blue)}
+.tab.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
+.badge{display:inline-flex;align-items:center;justify-content:center;
+       background:var(--blue);color:#fff;font-size:11px;font-weight:700;
+       border-radius:10px;padding:1px 6px;margin-left:5px;min-width:20px}
+
+/* ── CONTENT ── */
+.content{padding:24px;max-width:1500px;margin:0 auto}
+.panel{display:none}.panel.active{display:block}
+
+/* ── KPI ROW ── */
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:24px}
+.kpi{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 24px}
+.kpi-val{font-size:36px;font-weight:700;line-height:1;margin-bottom:6px}
+.kpi-val.blue{color:var(--blue)}
+.kpi-lbl{font-size:13px;color:var(--muted)}
+
+/* ── TOOLBAR ── */
+.toolbar{background:#fff;border:1px solid var(--border);border-radius:8px;
+         padding:14px 18px;display:flex;gap:10px;align-items:flex-end;
+         margin-bottom:14px;flex-wrap:wrap}
+.fg{display:flex;flex-direction:column;gap:3px}
+.fg label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;
+           letter-spacing:.5px}
+input[type=text],select{border:1px solid var(--border);border-radius:4px;
+  padding:7px 10px;font-size:13px;color:var(--text);background:#fff;outline:none;
+  transition:border-color .15s}
+input[type=text]{min-width:220px}
+input[type=text]:focus,select:focus{border-color:var(--blue)}
+input::placeholder{color:var(--muted)}
+select{min-width:130px;cursor:pointer}
+.ml{margin-left:auto;display:flex;gap:8px;align-items:flex-end}
+
+/* ── BUTTONS ── */
+.btn{padding:8px 16px;border-radius:4px;border:1px solid;font-size:13px;
+     cursor:pointer;font-weight:500;transition:all .15s;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn-primary:hover{background:#0061CC}
+.btn-ghost{background:#fff;color:var(--text);border-color:var(--border)}
+.btn-ghost:hover{background:var(--bg)}
+.btn-sm{padding:5px 12px;font-size:12px}
+
+/* ── RESULT BAR ── */
+.result-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.rcount{font-size:13px;color:var(--muted)}
+.rcount strong{color:var(--text)}
+.legend{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);cursor:pointer}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* ── TABLE ── */
+.tbl-wrap{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+table{width:100%;border-collapse:collapse}
+thead{background:var(--bg)}
+th{padding:10px 14px;text-align:left;font-size:11px;font-weight:700;
+   color:var(--muted);text-transform:uppercase;letter-spacing:.5px;
+   border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;
+   user-select:none;position:relative}
+th:hover{color:var(--blue)}
+th.sorted{color:var(--blue)}
+th .si{font-size:10px;margin-left:3px;opacity:.5}
+th.sorted .si{opacity:1}
+td{padding:11px 14px;border-bottom:1px solid #F0F2F3;vertical-align:middle;font-size:13px}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:#F8F9FA;cursor:pointer}
+
+/* ── CELLS ── */
+.sp-cell{display:flex;align-items:center;gap:10px}
+.avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;
+        justify-content:center;font-weight:700;font-size:11px;color:#fff;flex-shrink:0}
+.sp-name{font-weight:600}
+.co-badge{width:26px;height:26px;border-radius:4px;display:flex;align-items:center;
+          justify-content:center;font-size:10px;font-weight:800;color:#fff;flex-shrink:0}
+.co-cell{display:flex;align-items:center;gap:8px}
+.match-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;
+            font-weight:600;background:#E8F5E9;color:var(--green)}
+.unmatched{color:var(--muted);font-size:12px}
+.score-wrap{display:flex;align-items:center;gap:7px}
+.score-bar{width:56px;height:6px;border-radius:3px;background:var(--border);overflow:hidden}
+.score-fill{height:100%;border-radius:3px}
+.play-dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+
+/* ── EVENT CARDS ── */
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.ev-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:18px;
+         transition:box-shadow .15s;cursor:pointer}
+.ev-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.ev-name{font-size:15px;font-weight:700;margin-bottom:4px}
+.ev-date{font-size:12px;color:var(--muted);margin-bottom:3px}
+.ev-loc{font-size:12px;color:var(--muted);margin-bottom:14px}
+.ev-stats{display:flex;gap:18px}
+.ev-stat{font-size:12px;color:var(--muted)}
+.ev-stat strong{color:var(--text);font-size:17px;display:block}
+.pchip{padding:3px 10px;border-radius:10px;font-size:11px;font-weight:600}
+.p-hi{background:#FDECEA;color:var(--red)}
+.p-me{background:#FEF3E2;color:var(--orange)}
+.p-lo{background:#F0F0F0;color:#555}
+.ev-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+
+/* ── IMPORT BANNER ── */
+.import-banner{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;
+               padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.import-text{font-size:13px;color:#1D4ED8;flex:1}
+.import-text strong{font-weight:700}
+
+/* ── MODAL ── */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);
+         display:none;align-items:center;justify-content:center;z-index:100}
+.overlay.open{display:flex}
+.modal{background:#fff;border-radius:8px;padding:28px;width:580px;
+       max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.modal-title{font-size:18px;font-weight:700;margin-bottom:6px}
+.modal-sub{font-size:13px;color:var(--muted);margin-bottom:18px}
+.modal-ta{width:100%;height:200px;border:1px solid var(--border);border-radius:4px;
+          padding:10px;font-size:13px;font-family:monospace;resize:vertical}
+.modal-actions{display:flex;gap:8px;margin-top:14px;justify-content:flex-end}
+.sample-csv{background:var(--bg);border-radius:4px;padding:10px;font-size:12px;
+             font-family:monospace;margin-bottom:14px;color:var(--muted);white-space:pre}
+
+/* ── DRAWER ── */
+.drw-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);display:none;z-index:90}
+.drw-overlay.open{display:block}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:440px;background:#fff;
+        box-shadow:-4px 0 20px rgba(0,0,0,.15);transform:translateX(100%);
+        transition:transform .25s;z-index:91;overflow-y:auto;padding:28px}
+.drawer.open{transform:translateX(0)}
+.drw-close{position:absolute;top:16px;right:16px;background:none;border:none;
+           font-size:22px;cursor:pointer;color:var(--gray);line-height:1}
+.drw-name{font-size:20px;font-weight:700;margin-bottom:4px;padding-right:32px}
+.drw-title{font-size:14px;color:var(--muted);margin-bottom:8px}
+.drw-co{font-size:14px;font-weight:600;margin-bottom:20px}
+.sec-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+           color:var(--muted);margin-bottom:10px;padding-bottom:6px;
+           border-bottom:1px solid var(--border)}
+.drw-field{margin-bottom:10px}
+.drw-field label{font-size:11px;color:var(--muted);display:block;margin-bottom:2px}
+.drw-field span{font-size:14px}
+.drw-select{width:100%;margin-top:4px;font-size:13px;padding:6px 10px;
+            border:1px solid var(--border);border-radius:4px;cursor:pointer}
+.drw-link{color:var(--blue);text-decoration:none;font-size:13px}
+.drw-link:hover{text-decoration:underline}
+.drw-sec{margin-bottom:24px}
+
+/* ── EMPTY ── */
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty-ico{font-size:42px;margin-bottom:12px}
+
+/* ── OVERVIEW CHART AREA ── */
+.ov-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.ov-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px}
+.ov-card-title{font-size:13px;font-weight:700;color:var(--muted);
+               text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.bar-label{font-size:13px;min-width:160px;white-space:nowrap;overflow:hidden;
+           text-overflow:ellipsis}
+.bar-track{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;background:var(--blue)}
+.bar-val{font-size:12px;color:var(--muted);min-width:28px;text-align:right}
+
+@media(max-width:1100px){.kpi-row{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .toolbar{flex-direction:column;align-items:stretch}
+  .drawer{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="sap-logo">SAP</div>
+  <div class="hdr-title">Americas Event Speaker &amp; Attendee Tracker</div>
+  <span class="hdr-label">Market unit</span>
+  <select class="hdr-sel" id="muFilter" onchange="applyFilters()">
+    <option value="">All MUs</option>
+    <option value="US Northeast / Canada">US Northeast / Canada</option>
+    <option value="US Southeast">US Southeast</option>
+    <option value="US Central">US Central</option>
+    <option value="US West">US West</option>
+    <option value="Latin America">Latin America</option>
+    <option value="Canada">Canada</option>
+  </select>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('overview',this)">Overview</div>
+  <div class="tab" onclick="switchTab('events',this)">Events <span class="badge" id="evBadge">0</span></div>
+  <div class="tab" onclick="switchTab('speakers',this)">Speakers <span class="badge" id="spBadge">0</span></div>
+  <div class="tab" onclick="switchTab('accounts',this)">Accounts <span class="badge" id="acBadge">0</span></div>
+  <div class="tab" onclick="switchTab('contacts',this)">Contacts <span class="badge" id="ctBadge">0</span></div>
+</div>
+
+<!-- ══════════════════════════════ OVERVIEW ══════════════════════════════ -->
+<div class="content">
+<div class="panel active" id="panel-overview">
+  <div class="kpi-row">
+    <div class="kpi"><div class="kpi-val" id="kpi-events">0</div><div class="kpi-lbl">Upcoming events</div></div>
+    <div class="kpi"><div class="kpi-val blue" id="kpi-hipri">0</div><div class="kpi-lbl">High-priority events</div></div>
+    <div class="kpi"><div class="kpi-val" id="kpi-speakers">0</div><div class="kpi-lbl">External speakers identified</div></div>
+    <div class="kpi"><div class="kpi-val blue" id="kpi-dm">0</div><div class="kpi-lbl">Decision-makers (score 4–5)</div></div>
+    <div class="kpi"><div class="kpi-val" id="kpi-matched">0</div><div class="kpi-lbl">Matched to accounts</div></div>
+  </div>
+
+  <div class="ov-row">
+    <div class="ov-card">
+      <div class="ov-card-title">Top events by speaker count</div>
+      <div id="topEvents"></div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-card-title">Top companies represented</div>
+      <div id="topCompanies"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ EVENTS ══════════════════════════════ -->
+<div class="panel" id="panel-events">
+  <div class="toolbar">
+    <div class="fg"><label>Search</label>
+      <input type="text" id="evSearch" placeholder="Event name or location…" oninput="renderEvents()">
+    </div>
+    <div class="fg"><label>Focus</label>
+      <select id="evFocus" onchange="renderEvents()"><option value="">All</option></select>
+    </div>
+    <div class="ml">
+      <button class="btn btn-ghost" onclick="openImport()">⬆ Import Data</button>
+      <button class="btn btn-primary" onclick="exportEventsCSV()">⬇ Download CSV</button>
+    </div>
+  </div>
+  <div id="evGrid" class="ev-grid"></div>
+</div>
+
+<!-- ══════════════════════════════ SPEAKERS ══════════════════════════════ -->
+<div class="panel" id="panel-speakers">
+
+  <div class="import-banner" id="importBanner">
+    <span style="font-size:20px">📋</span>
+    <span class="import-text">
+      <strong>Connect your account list</strong> — paste your accounts (with AE & IAE names)
+      so the tracker can highlight which speakers are from your accounts.
+    </span>
+    <button class="btn btn-primary btn-sm" onclick="openAcctModal()">Import Accounts</button>
+  </div>
+
+  <div class="toolbar">
+    <div class="fg"><label>Search</label>
+      <input type="text" id="spSearch" placeholder="Name, company, title or topic…" oninput="applyFilters()">
+    </div>
+    <div class="fg"><label>Event</label>
+      <select id="spEvent" onchange="applyFilters()"><option value="">All events</option></select>
+    </div>
+    <div class="fg"><label>Score</label>
+      <select id="spScore" onchange="applyFilters()">
+        <option value="">All</option>
+        <option value="5">5 only</option>
+        <option value="4">4 and up</option>
+        <option value="3">3 and up</option>
+      </select>
+    </div>
+    <div class="fg"><label>Play</label>
+      <select id="spPlay" onchange="applyFilters()">
+        <option value="">All plays</option>
+        <option value="Create">Create</option>
+        <option value="Progress">Progress</option>
+        <option value="Partner">Partner</option>
+        <option value="Competitive">Competitive</option>
+        <option value="SAP">SAP</option>
+      </select>
+    </div>
+    <div class="fg"><label>IAE</label>
+      <select id="spIAE" onchange="applyFilters()"><option value="">All IAEs</option></select>
+    </div>
+    <div class="fg"><label>AE</label>
+      <select id="spAE" onchange="applyFilters()"><option value="">All AEs</option></select>
+    </div>
+    <div class="fg"><label>Account match</label>
+      <select id="spMatch" onchange="applyFilters()">
+        <option value="">All</option>
+        <option value="matched">Matched accounts only</option>
+        <option value="unmatched">Unmatched only</option>
+      </select>
+    </div>
+    <div class="ml">
+      <button class="btn btn-ghost btn-sm" onclick="resetFilters()">Reset</button>
+      <button class="btn btn-primary" onclick="exportCSV()">⬇ Download CSV</button>
+    </div>
+  </div>
+
+  <div class="result-bar">
+    <span class="rcount"><strong id="spCount">0</strong> of <strong id="spTotal">0</strong> speakers</span>
+    <div class="legend">
+      <span class="leg" onclick="filterPlay('Create')"><span class="dot" style="background:var(--green)"></span>Create</span>
+      <span class="leg" onclick="filterPlay('Progress')"><span class="dot" style="background:var(--blue)"></span>Progress</span>
+      <span class="leg" onclick="filterPlay('Partner')"><span class="dot" style="background:#444"></span>Partner</span>
+      <span class="leg" onclick="filterPlay('Competitive')"><span class="dot" style="background:var(--orange)"></span>Competitive</span>
+      <span class="leg" onclick="filterPlay('SAP')"><span class="dot" style="background:#5B8DEF"></span>SAP</span>
+      <span class="leg" onclick="filterPlay('')"><span style="font-size:11px">✕</span> Clear</span>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th onclick="sortBy('name')">Speaker <span class="si">↕</span></th>
+          <th onclick="sortBy('title')">Title <span class="si">↕</span></th>
+          <th onclick="sortBy('company')">Company <span class="si">↕</span></th>
+          <th onclick="sortBy('iae')">IAE <span class="si">↕</span></th>
+          <th onclick="sortBy('ae')">AE <span class="si">↕</span></th>
+          <th>Topic / Event</th>
+          <th onclick="sortBy('score')">Score <span class="si">↕</span></th>
+          <th>Play</th>
+        </tr>
+      </thead>
+      <tbody id="spTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ ACCOUNTS ══════════════════════════════ -->
+<div class="panel" id="panel-accounts">
+  <div class="toolbar">
+    <div class="fg"><label>Search</label>
+      <input type="text" id="acSearch" placeholder="Account name, AE or IAE…" oninput="renderAccounts()">
+    </div>
+    <div class="ml">
+      <button class="btn btn-ghost" onclick="openAcctModal()">⬆ Import / Update Accounts</button>
+      <button class="btn btn-primary" onclick="exportAccountsCSV()">⬇ Download CSV</button>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Account</th>
+          <th>AE</th>
+          <th>IAE</th>
+          <th>Market Unit</th>
+          <th>Speakers attending</th>
+          <th>Events</th>
+        </tr>
+      </thead>
+      <tbody id="acTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CONTACTS PANEL ══════════════════════════════ -->
+<div class="panel" id="panel-contacts">
+  <div class="toolbar">
+    <div class="fg"><label>Search</label>
+      <input type="text" id="ctSearch" placeholder="Event name or contact…" oninput="renderContacts()">
+    </div>
+    <div class="ml">
+      <button class="btn btn-primary" onclick="exportContactsCSV()">⬇ Download CSV</button>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Event</th><th>Date</th><th>Main Event Contact</th><th>Email</th><th>External Site</th>
+        </tr>
+      </thead>
+      <tbody id="ctBody"></tbody>
+    </table>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<!-- ══════════════════════════════ ACCOUNT IMPORT MODAL ══════════════════════════════ -->
+<div class="overlay" id="acctOverlay">
+  <div class="modal">
+    <div class="modal-title">Import Account List</div>
+    <div class="modal-sub">Paste your account list as CSV. Once imported, speakers will be matched to accounts and AE / IAE fields will populate automatically.</div>
+    <div class="sample-csv">Account,AE,IAE,Market Unit
+Boehringer Ingelheim USA,Jane Smith,US Northeast / Canada,US Northeast
+Accenture,John Doe,US Northeast / Canada,US Northeast
+JPMorgan Chase,Sarah Lee,US Southeast,US Southeast</div>
+    <textarea class="modal-ta" id="acctCSV" placeholder="Paste CSV here…"></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeAcctModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="importAccounts()">Import</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ DATA IMPORT MODAL ══════════════════════════════ -->
+<div class="overlay" id="dataOverlay">
+  <div class="modal">
+    <div class="modal-title">Load Scraper Data</div>
+    <div class="modal-sub">Paste the contents of <code>sap_events_raw.json</code> (from <code>~/sap-event-tracker/</code>) to load live event and speaker data into the tracker.</div>
+    <textarea class="modal-ta" id="dataJSON" placeholder='[{"name":"AFP 2026","speakers":[...]}]'></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeImport()">Cancel</button>
+      <button class="btn btn-primary" onclick="loadJSON()">Load Data</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ SPEAKER DRAWER ══════════════════════════════ -->
+<div class="drw-overlay" id="drwOverlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <button class="drw-close" onclick="closeDrawer()">✕</button>
+  <div class="drw-name" id="drwName"></div>
+  <div class="drw-title" id="drwTitle"></div>
+  <div class="drw-co" id="drwCo"></div>
+
+  <div class="drw-sec">
+    <div class="sec-title">Event</div>
+    <div class="drw-field"><span id="drwEvent"></span></div>
+    <div class="drw-field"><label>Date</label><span id="drwDate"></span></div>
+    <div class="drw-field"><label>Location</label><span id="drwLoc"></span></div>
+    <div class="drw-field">
+      <a class="drw-link" id="drwExtLink" href="#" target="_blank"></a>
+    </div>
+  </div>
+
+  <div class="drw-sec">
+    <div class="sec-title">CRM Assignment</div>
+    <div class="drw-field">
+      <label>AE</label>
+      <select class="drw-select" id="drwAE" onchange="saveAssignment('ae')">
+        <option value="">— assign AE —</option>
+      </select>
+    </div>
+    <div class="drw-field">
+      <label>IAE</label>
+      <select class="drw-select" id="drwIAE" onchange="saveAssignment('iae')">
+        <option value="">— assign IAE —</option>
+      </select>
+    </div>
+    <div class="drw-field">
+      <label>Play</label>
+      <select class="drw-select" id="drwPlay" onchange="saveAssignment('play')">
+        <option value="">— assign play —</option>
+        <option value="Create">Create</option>
+        <option value="Progress">Progress</option>
+        <option value="Partner">Partner</option>
+        <option value="Competitive">Competitive</option>
+        <option value="SAP">SAP</option>
+      </select>
+    </div>
+    <div class="drw-field">
+      <label>Score (1–5)</label>
+      <select class="drw-select" id="drwScore" onchange="saveAssignment('score')">
+        <option value="">—</option>
+        <option value="1">1 – Low</option>
+        <option value="2">2</option>
+        <option value="3">3 – Medium</option>
+        <option value="4">4</option>
+        <option value="5">5 – High</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="drw-sec">
+    <div class="sec-title">Account match</div>
+    <div id="drwMatch"></div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════════════
+let EVENTS   = [];   // [{name, date, location, external_url, description, speakers:[]}]
+let ACCOUNTS = [];   // [{account, ae, iae, market_unit}]
+let SPEAKERS = [];   // flat list built from EVENTS
+
+let _sort    = { key: 'score', dir: -1 };
+let _active  = null;  // currently open speaker in drawer
+
+// ═══════════════════════════════════════════════════════════════
+//  SAMPLE DATA  (replaced when scraper JSON is loaded)
+// ═══════════════════════════════════════════════════════════════
+const SAMPLE = [
+  { name:"AFP 2026", date:"08 Nov 2026 (4 Days)", location:"Las Vegas, NV",
+    external_url:"https://afponline.org/annual",
+    speakers:[
+      {name:"Maria Chen",title:"CFO",company:"Textron Inc",photo:""},
+      {name:"Robert Walsh",title:"VP Finance",company:"Raytheon Technologies",photo:""},
+      {name:"Priya Nair",title:"Treasurer",company:"L3Harris Technologies",photo:""},
+    ]},
+  { name:"HRFest Canada", date:"10 Nov 2026 (2 Days)", location:"Toronto, Canada",
+    external_url:"https://hrfestcanada.com",
+    speakers:[
+      {name:"Lena Hoffman",title:"CHRO",company:"Shopify",photo:""},
+      {name:"James Osei",title:"VP People & Culture",company:"Loblaw Companies",photo:""},
+    ]},
+  { name:"Info-tech Toronto", date:"10 Nov 2026 (3 Days)", location:"Toronto, Canada",
+    external_url:"https://infotech.com/toronto",
+    speakers:[
+      {name:"Jim Panos",title:"CIO",company:"Central National Gottesman",photo:""},
+      {name:"Rajeev Sukumaran",title:"VP, Head of IT / CIO",company:"Boehringer Ingelheim USA",photo:""},
+      {name:"Vic Verma",title:"EVP & Chief Information Officer",company:"International Flavors & Fragrances",photo:""},
+      {name:"Ana Torres",title:"SVP Technology",company:"Manulife",photo:""},
+    ]},
+  { name:"Gartner COO Dinner", date:"10 Nov 2026 (1 Day)", location:"Chicago, IL",
+    external_url:"https://gartner.com/events",
+    speakers:[
+      {name:"Kevin Park",title:"COO",company:"United Airlines",photo:""},
+      {name:"Sandra Moore",title:"Chief Operating Officer",company:"Hyatt Hotels",photo:""},
+    ]},
+  { name:"HMG Strategy Summit", date:"15 Oct 2026 (1 Day)", location:"Greenwich, CT",
+    external_url:"https://hmgstrategy.com/summit",
+    speakers:[
+      {name:"David Kim",title:"CIO",company:"Synchrony Financial",photo:""},
+      {name:"Elena Vasquez",title:"VP IT Strategy",company:"Cigna",photo:""},
+      {name:"Marcus Reid",title:"Chief Digital Officer",company:"AARP",photo:""},
+    ]},
+  { name:"Gartner IT Symposium", date:"20 Oct 2026 (4 Days)", location:"Orlando, FL",
+    external_url:"https://gartner.com/symposium",
+    speakers:[
+      {name:"Tom Bradley",title:"CIO",company:"Honeywell",photo:""},
+      {name:"Fatima Al-Hassan",title:"VP Technology Transformation",company:"American Express",photo:""},
+    ]},
+];
+
+const SAMPLE_ACCOUNTS = [
+  {account:"Boehringer Ingelheim USA",ae:"Alex Johnson",iae:"Sarah Chen",market_unit:"US Northeast / Canada"},
+  {account:"International Flavors & Fragrances",ae:"Mark Davis",iae:"Sarah Chen",market_unit:"US Northeast / Canada"},
+  {account:"Synchrony Financial",ae:"Rachel Kim",iae:"Tom Park",market_unit:"US Northeast / Canada"},
+  {account:"Cigna",ae:"Michael Torres",iae:"Tom Park",market_unit:"US Northeast / Canada"},
+  {account:"United Airlines",ae:"Jennifer Wu",iae:"Dan Brown",market_unit:"US Central"},
+];
+
+// ═══════════════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════════════
+function init() {
+  const saved = localStorage.getItem('sap_events');
+  const savedAc = localStorage.getItem('sap_accounts');
+  EVENTS   = saved   ? JSON.parse(saved)   : SAMPLE;
+  ACCOUNTS = savedAc ? JSON.parse(savedAc) : SAMPLE_ACCOUNTS;
+  buildSpeakers();
+  refreshAll();
+}
+
+function buildSpeakers() {
+  SPEAKERS = [];
+  const saved = JSON.parse(localStorage.getItem('sap_assignments') || '{}');
+  EVENTS.forEach(ev => {
+    (ev.speakers || []).forEach(sp => {
+      const key = `${sp.name}|${ev.name}`;
+      const acct = matchAccount(sp.company);
+      const assign = saved[key] || {};
+      SPEAKERS.push({
+        name:    sp.name,
+        title:   sp.title || '',
+        company: sp.company || '',
+        photo:   sp.photo || '',
+        event:   ev.name,
+        date:    ev.date || '',
+        location:ev.location || '',
+        ext_url: ev.external_url || '',
+        score:   assign.score  || 0,
+        play:    assign.play   || '',
+        ae:      assign.ae     || acct?.ae    || '',
+        iae:     assign.iae    || acct?.iae   || '',
+        market_unit: acct?.market_unit || '',
+        matched: !!acct,
+        account: acct?.account || '',
+        _key:    key,
+      });
+    });
+  });
+}
+
+function matchAccount(company) {
+  if (!company) return null;
+  const lc = company.toLowerCase();
+  return ACCOUNTS.find(a => {
+    const al = a.account.toLowerCase();
+    return lc.includes(al) || al.includes(lc) || similarity(lc,al) > 0.75;
+  }) || null;
+}
+
+function similarity(a, b) {
+  // Simple Jaccard on words
+  const wa = new Set(a.split(/\s+/));
+  const wb = new Set(b.split(/\s+/));
+  let inter = 0;
+  wa.forEach(w => { if (wb.has(w)) inter++; });
+  return inter / (wa.size + wb.size - inter);
+}
+
+function refreshAll() {
+  updateBadges();
+  updateKPIs();
+  renderOverview();
+  renderEvents();
+  applyFilters();
+  renderAccounts();
+  renderContacts();
+  populateDropdowns();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  BADGES & KPIs
+// ═══════════════════════════════════════════════════════════════
+function updateBadges() {
+  document.getElementById('evBadge').textContent = EVENTS.length;
+  document.getElementById('spBadge').textContent = SPEAKERS.length;
+  document.getElementById('acBadge').textContent = ACCOUNTS.length;
+}
+
+function updateKPIs() {
+  const mu = document.getElementById('muFilter').value;
+  const sp = mu ? SPEAKERS.filter(s => s.market_unit === mu || s.iae.includes(mu)) : SPEAKERS;
+  document.getElementById('kpi-events').textContent   = EVENTS.length;
+  document.getElementById('kpi-hipri').textContent    = EVENTS.filter(e => (e.speakers||[]).length >= 3).length;
+  document.getElementById('kpi-speakers').textContent = sp.length;
+  document.getElementById('kpi-dm').textContent       = sp.filter(s => s.score >= 4).length;
+  document.getElementById('kpi-matched').textContent  = sp.filter(s => s.matched).length;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  OVERVIEW TAB
+// ═══════════════════════════════════════════════════════════════
+function renderOverview() {
+  // Top events by speaker count
+  const byEvent = EVENTS.map(e => ({name:e.name, count:(e.speakers||[]).length}))
+    .sort((a,b) => b.count-a.count).slice(0,8);
+  const maxE = byEvent[0]?.count || 1;
+  document.getElementById('topEvents').innerHTML = byEvent.map(e =>
+    `<div class="bar-row">
+       <div class="bar-label" title="${e.name}">${e.name}</div>
+       <div class="bar-track"><div class="bar-fill" style="width:${e.count/maxE*100}%"></div></div>
+       <div class="bar-val">${e.count}</div>
+     </div>`).join('');
+
+  // Top companies
+  const coMap = {};
+  SPEAKERS.forEach(s => { coMap[s.company] = (coMap[s.company]||0)+1; });
+  const topCo = Object.entries(coMap).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  const maxC = topCo[0]?.[1] || 1;
+  document.getElementById('topCompanies').innerHTML = topCo.map(([co,cnt]) =>
+    `<div class="bar-row">
+       <div class="bar-label" title="${co}">${co}</div>
+       <div class="bar-track"><div class="bar-fill" style="width:${cnt/maxC*100}%;background:var(--green)"></div></div>
+       <div class="bar-val">${cnt}</div>
+     </div>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  EVENTS TAB
+// ═══════════════════════════════════════════════════════════════
+function renderEvents() {
+  const q  = document.getElementById('evSearch').value.toLowerCase();
+  const fo = document.getElementById('evFocus').value;
+  let list = EVENTS;
+  if (q) list = list.filter(e => e.name.toLowerCase().includes(q) || (e.location||'').toLowerCase().includes(q));
+  const grid = document.getElementById('evGrid');
+  if (!list.length) { grid.innerHTML='<div class="empty"><div class="empty-ico">📅</div>No events found</div>'; return; }
+  grid.innerHTML = list.map((e,i) => {
+    const spCnt = (e.speakers||[]).length;
+    const matched = (e.speakers||[]).filter(s => matchAccount(s.company)).length;
+    const pri = spCnt >= 4 ? 'p-hi' : spCnt >= 2 ? 'p-me' : 'p-lo';
+    const priTxt = spCnt >= 4 ? 'High' : spCnt >= 2 ? 'Medium' : 'Low';
+    return `<div class="ev-card" onclick="goToEvent('${e.name.replace(/'/g,"\\'")}')">
+      <div class="ev-card-top">
+        <div>
+          <div class="ev-name">${e.name}</div>
+          <div class="ev-date">${e.date||''}</div>
+          <div class="ev-loc">📍 ${e.location||''}</div>
+        </div>
+        <span class="pchip ${pri}">${priTxt}</span>
+      </div>
+      <div class="ev-stats">
+        <div class="ev-stat"><strong>${spCnt}</strong>Speakers</div>
+        <div class="ev-stat"><strong>${matched}</strong>Acct matches</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function goToEvent(name) {
+  document.getElementById('spEvent').value = name;
+  switchTab('speakers', document.querySelectorAll('.tab')[2]);
+  applyFilters();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  SPEAKERS TAB
+// ═══════════════════════════════════════════════════════════════
+const PLAY_COLORS = {
+  Create:'var(--green)', Progress:'var(--blue)', Partner:'#444',
+  Competitive:'var(--orange)', SAP:'#5B8DEF', '':"#ccc"
+};
+const AVATAR_COLORS = ['#0070F2','#30914C','#E76500','#6A2693','#BB0000','#007DB8','#556B82'];
+
+function avatarColor(name) {
+  let h = 0; for (let c of name) h = (h*31 + c.charCodeAt(0)) & 0xFFFFFF;
+  return AVATAR_COLORS[Math.abs(h) % AVATAR_COLORS.length];
+}
+function initials(name) {
+  return name.split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
+}
+function badgeColor(co) {
+  return avatarColor(co);
+}
+
+function applyFilters() {
+  updateKPIs();
+  const q     = document.getElementById('spSearch').value.toLowerCase();
+  const ev    = document.getElementById('spEvent').value;
+  const sc    = parseInt(document.getElementById('spScore').value) || 0;
+  const play  = document.getElementById('spPlay').value;
+  const iae   = document.getElementById('spIAE').value;
+  const ae    = document.getElementById('spAE').value;
+  const match = document.getElementById('spMatch').value;
+  const mu    = document.getElementById('muFilter').value;
+
+  let list = SPEAKERS;
+  if (q)     list = list.filter(s =>
+    s.name.toLowerCase().includes(q) || s.company.toLowerCase().includes(q) ||
+    s.title.toLowerCase().includes(q) || s.event.toLowerCase().includes(q));
+  if (ev)    list = list.filter(s => s.event === ev);
+  if (sc)    list = list.filter(s => s.score >= sc);
+  if (play)  list = list.filter(s => s.play === play);
+  if (iae)   list = list.filter(s => s.iae === iae);
+  if (ae)    list = list.filter(s => s.ae === ae);
+  if (match === 'matched')   list = list.filter(s => s.matched);
+  if (match === 'unmatched') list = list.filter(s => !s.matched);
+  if (mu)    list = list.filter(s => s.market_unit === mu || s.iae.includes(mu));
+
+  // Sort
+  list = [...list].sort((a,b) => {
+    let va = a[_sort.key] || '', vb = b[_sort.key] || '';
+    if (typeof va === 'number') return (va - vb) * _sort.dir;
+    return va.toString().localeCompare(vb.toString()) * _sort.dir;
+  });
+
+  document.getElementById('spCount').textContent = list.length;
+  document.getElementById('spTotal').textContent = SPEAKERS.length;
+
+  const tbody = document.getElementById('spTbody');
+  if (!list.length) {
+    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--muted)">No speakers match the current filters</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = list.map(s => {
+    const scoreBar = s.score
+      ? `<div class="score-wrap">
+           <div class="score-bar"><div class="score-fill" style="width:${s.score/5*100}%;background:${s.score>=4?'var(--red)':'var(--orange)'}"></div></div>
+           <span>${s.score}</span>
+         </div>`
+      : `<span style="color:var(--muted);font-size:12px">—</span>`;
+    const playDot = s.play
+      ? `<span class="play-dot" style="background:${PLAY_COLORS[s.play]}" title="${s.play}"></span> ${s.play}`
+      : `<span style="color:var(--muted);font-size:12px">—</span>`;
+    const matchCell = s.matched
+      ? `<span class="match-tag" title="${s.account}">${s.account.length>20?s.account.slice(0,18)+'…':s.account}</span>`
+      : `<span class="unmatched">${s.ae || '—'}</span>`;
+    const iaeCell = s.iae || `<span class="unmatched">—</span>`;
+
+    return `<tr onclick="openDrawer('${s._key.replace(/'/g,"\\'")}')">
+      <td><div class="sp-cell">
+        <div class="avatar" style="background:${avatarColor(s.name)}">${initials(s.name)}</div>
+        <div><div class="sp-name">${s.name}</div></div>
+      </div></td>
+      <td>${s.title || '<span class="unmatched">—</span>'}</td>
+      <td><div class="co-cell">
+        <div class="co-badge" style="background:${badgeColor(s.company)}">${initials(s.company)}</div>
+        <span>${s.company}</span>
+      </div></td>
+      <td>${iaeCell}</td>
+      <td>${matchCell}</td>
+      <td><span style="font-size:12px;color:var(--muted)">${s.event}</span></td>
+      <td>${scoreBar}</td>
+      <td>${playDot}</td>
+    </tr>`;
+  }).join('');
+}
+
+function sortBy(key) {
+  if (_sort.key === key) _sort.dir *= -1;
+  else { _sort.key = key; _sort.dir = key === 'score' ? -1 : 1; }
+  document.querySelectorAll('th').forEach(th => th.classList.remove('sorted'));
+  applyFilters();
+}
+
+function filterPlay(play) {
+  document.getElementById('spPlay').value = play;
+  applyFilters();
+}
+
+function resetFilters() {
+  ['spSearch','spEvent','spScore','spPlay','spIAE','spAE','spMatch'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  applyFilters();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  ACCOUNTS TAB
+// ═══════════════════════════════════════════════════════════════
+function renderAccounts() {
+  document.getElementById('acBadge').textContent = ACCOUNTS.length;
+  const q = (document.getElementById('acSearch')?.value || '').toLowerCase();
+  let list = ACCOUNTS;
+  if (q) list = list.filter(a =>
+    a.account.toLowerCase().includes(q) || a.ae.toLowerCase().includes(q) || a.iae.toLowerCase().includes(q));
+
+  const tbody = document.getElementById('acTbody');
+  if (!list.length) {
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--muted)">No accounts yet. <a href="#" onclick="openAcctModal()">Import your account list</a></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = list.map(a => {
+    const spks = SPEAKERS.filter(s => {
+      const co = s.company.toLowerCase(), ac = a.account.toLowerCase();
+      return co.includes(ac) || ac.includes(co);
+    });
+    const evts = [...new Set(spks.map(s => s.event))];
+    return `<tr>
+      <td><strong>${a.account}</strong></td>
+      <td>${a.ae || '—'}</td>
+      <td>${a.iae || '—'}</td>
+      <td>${a.market_unit || '—'}</td>
+      <td>${spks.length ? `<span class="match-tag">${spks.length} speaker${spks.length>1?'s':''}</span>` : '<span class="unmatched">none found</span>'}</td>
+      <td style="font-size:12px;color:var(--muted)">${evts.join(', ') || '—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  DROPDOWNS
+// ═══════════════════════════════════════════════════════════════
+function populateDropdowns() {
+  const events  = [...new Set(SPEAKERS.map(s => s.event))].sort();
+  const iaes    = [...new Set(SPEAKERS.map(s => s.iae).filter(Boolean))].sort();
+  const aes     = [...new Set(SPEAKERS.map(s => s.ae).filter(Boolean))].sort();
+
+  setOpts('spEvent', events,  'All events');
+  setOpts('spIAE',   iaes,    'All IAEs');
+  setOpts('spAE',    aes,     'All AEs');
+
+  // Drawer dropdowns
+  setOpts('drwAE',  aes,  '— assign AE —');
+  setOpts('drwIAE', iaes, '— assign IAE —');
+}
+
+function setOpts(id, vals, placeholder) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const cur = el.value;
+  el.innerHTML = `<option value="">${placeholder}</option>` +
+    vals.map(v => `<option value="${v}">${v}</option>`).join('');
+  if (cur) el.value = cur;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  DRAWER
+// ═══════════════════════════════════════════════════════════════
+function openDrawer(key) {
+  const sp = SPEAKERS.find(s => s._key === key);
+  if (!sp) return;
+  _active = sp;
+
+  document.getElementById('drwName').textContent  = sp.name;
+  document.getElementById('drwTitle').textContent = sp.title;
+  document.getElementById('drwCo').textContent    = sp.company;
+  document.getElementById('drwEvent').textContent = sp.event;
+  document.getElementById('drwDate').textContent  = sp.date;
+  document.getElementById('drwLoc').textContent   = sp.location;
+  const link = document.getElementById('drwExtLink');
+  if (sp.ext_url) { link.href = sp.ext_url; link.textContent = '🔗 View event website'; }
+  else link.textContent = '';
+
+  document.getElementById('drwAE').value    = sp.ae;
+  document.getElementById('drwIAE').value   = sp.iae;
+  document.getElementById('drwPlay').value  = sp.play;
+  document.getElementById('drwScore').value = sp.score || '';
+
+  const matchDiv = document.getElementById('drwMatch');
+  if (sp.matched) {
+    const a = ACCOUNTS.find(a => {
+      const co = sp.company.toLowerCase(), ac = a.account.toLowerCase();
+      return co.includes(ac) || ac.includes(co);
+    });
+    matchDiv.innerHTML = a
+      ? `<div class="match-tag" style="font-size:13px">${a.account}</div>
+         <div style="margin-top:6px;font-size:12px;color:var(--muted)">AE: ${a.ae} &nbsp;|&nbsp; IAE: ${a.iae}</div>`
+      : '<span class="unmatched">Account match found</span>';
+  } else {
+    matchDiv.innerHTML = '<span class="unmatched">No account match</span>';
+  }
+
+  document.getElementById('drwOverlay').classList.add('open');
+  document.getElementById('drawer').classList.add('open');
+}
+
+function closeDrawer() {
+  document.getElementById('drwOverlay').classList.remove('open');
+  document.getElementById('drawer').classList.remove('open');
+  _active = null;
+}
+
+function saveAssignment(field) {
+  if (!_active) return;
+  const val = document.getElementById(`drw${field.charAt(0).toUpperCase()+field.slice(1)}`).value;
+  const stored = JSON.parse(localStorage.getItem('sap_assignments') || '{}');
+  stored[_active._key] = stored[_active._key] || {};
+  stored[_active._key][field] = val;
+  localStorage.setItem('sap_assignments', JSON.stringify(stored));
+  _active[field] = val;
+  // Update in SPEAKERS array
+  const sp = SPEAKERS.find(s => s._key === _active._key);
+  if (sp) sp[field] = val;
+  applyFilters();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  ACCOUNT IMPORT
+// ═══════════════════════════════════════════════════════════════
+function openAcctModal() {
+  document.getElementById('acctOverlay').classList.add('open');
+}
+function closeAcctModal() {
+  document.getElementById('acctOverlay').classList.remove('open');
+}
+function importAccounts() {
+  const raw = document.getElementById('acctCSV').value.trim();
+  if (!raw) return;
+  const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+  const header = lines[0].toLowerCase().split(',').map(h => h.trim());
+  const idx = { account: header.indexOf('account'), ae: header.indexOf('ae'),
+                iae: header.indexOf('iae'), mu: header.indexOf('market unit') };
+  if (idx.account < 0) { alert('CSV must have an "Account" column'); return; }
+
+  ACCOUNTS = lines.slice(1).map(line => {
+    const cols = line.split(',').map(c => c.trim());
+    return {
+      account:     cols[idx.account] || '',
+      ae:          idx.ae  >= 0 ? cols[idx.ae]  || '' : '',
+      iae:         idx.iae >= 0 ? cols[idx.iae] || '' : '',
+      market_unit: idx.mu  >= 0 ? cols[idx.mu]  || '' : '',
+    };
+  }).filter(a => a.account);
+
+  localStorage.setItem('sap_accounts', JSON.stringify(ACCOUNTS));
+  closeAcctModal();
+  buildSpeakers();
+  refreshAll();
+  document.getElementById('importBanner').style.display = 'none';
+  alert(`✓ Imported ${ACCOUNTS.length} accounts`);
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  DATA IMPORT (scraper JSON)
+// ═══════════════════════════════════════════════════════════════
+function openImport() {
+  document.getElementById('dataOverlay').classList.add('open');
+}
+function closeImport() {
+  document.getElementById('dataOverlay').classList.remove('open');
+}
+function loadJSON() {
+  try {
+    const raw = document.getElementById('dataJSON').value.trim();
+    const data = JSON.parse(raw);
+    if (!Array.isArray(data)) throw new Error('Expected a JSON array');
+    EVENTS = data;
+    localStorage.setItem('sap_events', JSON.stringify(EVENTS));
+    closeImport();
+    buildSpeakers();
+    refreshAll();
+    alert(`✓ Loaded ${EVENTS.length} events with ${SPEAKERS.length} speakers`);
+  } catch(e) {
+    alert('Invalid JSON: ' + e.message);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  EXPORT
+// ═══════════════════════════════════════════════════════════════
+function exportCSV() {
+  const cols = ['Name','Title','Company','IAE','AE','Event','Date','Location','Score','Play','Account Match','Event URL'];
+  const rows = SPEAKERS.map(s => [
+    s.name, s.title, s.company, s.iae, s.ae, s.event,
+    s.date, s.location, s.score||'', s.play||'',
+    s.matched ? s.account : '', s.ext_url||''
+  ]);
+  downloadCSV('speakers.csv', [cols, ...rows]);
+}
+
+function exportEventsCSV() {
+  const cols = ['Event','Date','Location','Speaker Count','Account Matches','External URL'];
+  const rows = EVENTS.map(e => {
+    const spCnt   = (e.speakers||[]).length;
+    const matched = (e.speakers||[]).filter(s => matchAccount(s.company)).length;
+    return [e.name, e.date||'', e.location||'', spCnt, matched, e.external_url||''];
+  });
+  downloadCSV('events.csv', [cols, ...rows]);
+}
+
+function exportAccountsCSV() {
+  const cols = ['Account','AE','IAE','Market Unit','Speaker Count','Events'];
+  const rows = ACCOUNTS.map(a => {
+    const spks = SPEAKERS.filter(s => {
+      const co = s.company.toLowerCase(), ac = a.account.toLowerCase();
+      return co.includes(ac) || ac.includes(co);
+    });
+    return [a.account, a.ae, a.iae, a.market_unit,
+            spks.length, [...new Set(spks.map(s=>s.event))].join('; ')];
+  });
+  downloadCSV('accounts.csv', [cols, ...rows]);
+}
+
+function downloadCSV(filename, rows) {
+  const csv = rows.map(r => r.map(v => `"${String(v||'').replace(/"/g,'""')}"`).join(',')).join('\n');
+  const a = Object.assign(document.createElement('a'), {
+    href: 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv),
+    download: filename
+  });
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  TABS
+// ═══════════════════════════════════════════════════════════════
+function switchTab(name, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  if (el) el.classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  CONTACTS
+// ═══════════════════════════════════════════════════════════════
+function renderContacts() {
+  const q = (document.getElementById('ctSearch')?.value || '').toLowerCase();
+  const contacts = EVENTS.filter(e => e.contact_name || e.contact_email);
+  document.getElementById('ctBadge').textContent = contacts.length;
+  let list = contacts;
+  if (q) list = list.filter(e =>
+    (e.name||'').toLowerCase().includes(q) ||
+    (e.contact_name||'').toLowerCase().includes(q) ||
+    (e.contact_email||'').toLowerCase().includes(q));
+
+  const tbody = document.getElementById('ctBody');
+  if (!list.length) {
+    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--muted)">No contact info yet — run the scraper to collect contacts from the SAP calendar.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = list.map(e => `
+    <tr>
+      <td><strong>${e.name}</strong></td>
+      <td>${e.date||''}</td>
+      <td>${e.contact_name||'—'}</td>
+      <td>${e.contact_email ? `<a href="mailto:${e.contact_email}">${e.contact_email}</a>` : '—'}</td>
+      <td>${e.external_url ? `<a href="${e.external_url}" target="_blank">Open ↗</a>` : '—'}</td>
+    </tr>`).join('');
+}
+
+function exportContactsCSV() {
+  const rows = EVENTS.map(e => [e.name, e.date||'', e.contact_name||'', e.contact_email||'', e.external_url||'']);
+  downloadCSV('event_contacts.csv', [['Event','Date','Main Event Contact','Email','External URL'], ...rows]);
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  BOOT
+// ═══════════════════════════════════════════════════════════════
+init();
+</script>
+</body>
+</html>

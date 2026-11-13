@@ -1,0 +1,1756 @@
+[
+  {
+    "name": "AFP 2026",
+    "date": "08 Nov 2026",
+    "external_url": "https://conference.financialprofessionals.org/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "HRFest Canada",
+    "date": "10 Nov 2026",
+    "external_url": "https://humanresourcesfest.com/canada/register-now",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": [
+      {
+        "name": "Karin Adams",
+        "title": "VP, Talent & Total Rewards",
+        "company": "TMX Group",
+        "raw": "Karin Adams VP, Talent & Total Rewards TMX Group"
+      },
+      {
+        "name": "Nura Askar",
+        "title": "Director of Learning & Development",
+        "company": "Intact",
+        "raw": "Nura Askar Director of Learning & Development Intact"
+      },
+      {
+        "name": "Loren Blandon",
+        "title": "Culture & People Lead",
+        "company": "Google Deepmind",
+        "raw": "Loren Blandon Culture & People Lead Google Deepmind"
+      },
+      {
+        "name": "Manuelita Cherizard",
+        "title": "Chief Human Resources Officer",
+        "company": "Royal Ontario Museum",
+        "raw": "Manuelita Cherizard Chief Human Resources Officer Royal Ontario Museum"
+      },
+      {
+        "name": "Katie Duarte",
+        "title": "Founder and Principal",
+        "company": "Action Potential Solutions",
+        "raw": "Katie Duarte Founder and Principal Action Potential Solutions"
+      },
+      {
+        "name": "Lara Dyer",
+        "title": "Chief Solutions Officer",
+        "company": "Talent Beyond Boundaries",
+        "raw": "Lara Dyer Chief Solutions Officer Talent Beyond Boundaries"
+      },
+      {
+        "name": "Katherine Gibbard, Ph.D.",
+        "title": "Senior Research Scientist, Future of Work Research Lab",
+        "company": "SAP SuccessFactors",
+        "raw": "Katherine Gibbard, Ph.D. Senior Research Scientist, Future of Work Research Lab SAP SuccessFactors"
+      },
+      {
+        "name": "Shawn Gibson",
+        "title": "CHRO",
+        "company": "Info-tech",
+        "raw": "Shawn Gibson CHRO Info-tech"
+      },
+      {
+        "name": "Christina Goodyear",
+        "title": "Senior Learning Program Manager",
+        "company": "GardaWorld",
+        "raw": "Christina Goodyear Senior Learning Program Manager GardaWorld"
+      },
+      {
+        "name": "Erin Gordon",
+        "title": "VP HR",
+        "company": "Lindt & Sprungli Canada",
+        "raw": "Erin Gordon VP HR Lindt & Sprungli Canada"
+      },
+      {
+        "name": "Barbara Green",
+        "title": "Partner",
+        "company": "Robins Appleby LLP",
+        "raw": "Barbara Green Partner Robins Appleby LLP"
+      },
+      {
+        "name": "Paulette Haynes",
+        "title": "Founder & Managing Officer",
+        "company": "Haynes Law Firm",
+        "raw": "Paulette Haynes Founder & Managing Officer Haynes Law Firm"
+      },
+      {
+        "name": "Mary-Jo Hewat",
+        "title": "Senior Vice President, Human Resources & Facilities",
+        "company": "Sagen",
+        "raw": "Mary-Jo Hewat Senior Vice President, Human Resources & Facilities Sagen"
+      },
+      {
+        "name": "Kristina M. Holle, CHRE",
+        "title": "Founder | Leadership & Culture Transformation Expert | Executive Coach | Author | Speaker",
+        "company": "Holle Consulting",
+        "raw": "Kristina M. Holle, CHRE Founder | Leadership & Culture Transformation Expert | Executive Coach | Author | Speaker Holle Consulting"
+      },
+      {
+        "name": "Daniel Imbeault, M.Sc.",
+        "title": "Senior Principal, Compensation, Talent & Culture",
+        "company": "Normandin Beaudry",
+        "raw": "Daniel Imbeault, M.Sc. Senior Principal, Compensation, Talent & Culture Normandin Beaudry"
+      },
+      {
+        "name": "Anupama Joshi",
+        "title": "Head of Talent",
+        "company": "FutureSight",
+        "raw": "Anupama Joshi Head of Talent FutureSight"
+      },
+      {
+        "name": "Suzannah Kelly",
+        "title": "Leadership Development Coach, Consultant and Facilitator",
+        "company": "The Elevated Talent Experience",
+        "raw": "Suzannah Kelly Leadership Development Coach, Consultant and Facilitator The Elevated Talent Experience"
+      },
+      {
+        "name": "Nupur Khandelwal",
+        "title": "Senior Director, Talent Management and DEI",
+        "company": "LCBO",
+        "raw": "Nupur Khandelwal Senior Director, Talent Management and DEI LCBO"
+      },
+      {
+        "name": "Cindy Khimji",
+        "title": "Executive Director, Human Resources",
+        "company": "OntarioMD",
+        "raw": "Cindy Khimji Executive Director, Human Resources OntarioMD"
+      },
+      {
+        "name": "Linda Krebs",
+        "title": "Global Head of Talent Acquisition",
+        "company": "Nokia",
+        "raw": "Linda Krebs Global Head of Talent Acquisition Nokia"
+      },
+      {
+        "name": "Erin Kuzz",
+        "title": "Employment Lawyer",
+        "company": "Sherrard Kuzz LLP",
+        "raw": "Erin Kuzz Employment Lawyer Sherrard Kuzz LLP"
+      },
+      {
+        "name": "Margot Lackenbauer",
+        "title": "CHRO",
+        "company": "BDO Canada",
+        "raw": "Margot Lackenbauer CHRO BDO Canada"
+      },
+      {
+        "name": "Katya Laviolette",
+        "title": "4x Chief People Officer | Board Director | Executive AdvisorExecutive Advisor",
+        "company": "1Password",
+        "raw": "Katya Laviolette 4x Chief People Officer | Board Director | Executive AdvisorExecutive Advisor 1Password"
+      },
+      {
+        "name": "Michelle Loo",
+        "title": "Chief DEI Officer",
+        "company": "Linde",
+        "raw": "Michelle Loo Chief DEI Officer Linde"
+      },
+      {
+        "name": "Fran\u00e7oise Mathieu",
+        "title": "Executive Director",
+        "company": "TEND Academy",
+        "raw": "Fran\u00e7oise Mathieu Executive Director TEND Academy"
+      },
+      {
+        "name": "Kim Morris",
+        "title": "Lead HR Consultant",
+        "company": "Citation Canada",
+        "raw": "Kim Morris Lead HR Consultant Citation Canada"
+      },
+      {
+        "name": "Lola Obomighie",
+        "title": "VP People, Culture & Organizational Effectiveness",
+        "company": "Northumberland Hills Hospital",
+        "raw": "Lola Obomighie VP People, Culture & Organizational Effectiveness Northumberland Hills Hospital"
+      },
+      {
+        "name": "Dr. Kalifa Oliver",
+        "title": "Executive Advisor, Author, & Sr. Director of Technology",
+        "company": "Lowes",
+        "raw": "Dr. Kalifa Oliver Executive Advisor, Author, & Sr. Director of Technology Lowes"
+      },
+      {
+        "name": "Rainu Singh",
+        "title": "VP, HR",
+        "company": "Crown Property Management",
+        "raw": "Rainu Singh VP, HR Crown Property Management"
+      },
+      {
+        "name": "Glenda Oldenburg",
+        "title": "",
+        "company": "WTW",
+        "raw": "Glenda Oldenburg WTW"
+      },
+      {
+        "name": "Kim Oliver",
+        "title": "Managing Director",
+        "company": "WTW",
+        "raw": "Kim Oliver Managing Director WTW"
+      },
+      {
+        "name": "Simone Ostrowski",
+        "title": "Partner",
+        "company": "Whitten & Lublin",
+        "raw": "Simone Ostrowski Partner Whitten & Lublin"
+      },
+      {
+        "name": "Janine Pajot",
+        "title": "Fearless Leadership & Culture Expert",
+        "company": "",
+        "raw": "Janine Pajot Fearless Leadership & Culture Expert"
+      },
+      {
+        "name": "Ric Phillips",
+        "title": "President & Head Communication Coach",
+        "company": "3V Communications",
+        "raw": "Ric Phillips President & Head Communication Coach 3V Communications"
+      },
+      {
+        "name": "Irina Posan",
+        "title": "",
+        "company": "Career & Leadership Coach",
+        "raw": "Irina Posan Career & Leadership Coach"
+      },
+      {
+        "name": "Kate Railton",
+        "title": "Chief People Officer",
+        "company": "Mejuri",
+        "raw": "Kate Railton Chief People Officer Mejuri"
+      },
+      {
+        "name": "Lee-Ann Reid",
+        "title": "VP of Operations",
+        "company": "Vistek",
+        "raw": "Lee-Ann Reid VP of Operations Vistek"
+      },
+      {
+        "name": "Jessica Rodrigues",
+        "title": "National Director, Client Services",
+        "company": "IA Financial",
+        "raw": "Jessica Rodrigues National Director, Client Services IA Financial"
+      },
+      {
+        "name": "Abhishek Sarathy",
+        "title": "Associate VP, DIB",
+        "company": "Canadian Tire Corporation",
+        "raw": "Abhishek Sarathy Associate VP, DIB Canadian Tire Corporation"
+      },
+      {
+        "name": "Abhishek\tSarathy",
+        "title": "Associate VP, DIB",
+        "company": "Canadian Tire Corporation",
+        "raw": "Abhishek\tSarathy                               Associate VP, DIB                               Canadian Tire Corporation"
+      },
+      {
+        "name": "Tammy Sergie",
+        "title": "Chief HR & Privacy Officer",
+        "company": "EHN Canada",
+        "raw": "Tammy Sergie Chief HR & Privacy Officer EHN Canada"
+      },
+      {
+        "name": "Hilai Shefa",
+        "title": "Founder",
+        "company": "Changely",
+        "raw": "Hilai Shefa Founder Changely"
+      },
+      {
+        "name": "Shibil Siddiqi",
+        "title": "Employment, Labour & Human Rights Lawyer, Workplace Investigator, Founder",
+        "company": "Progressive Barristers",
+        "raw": "Shibil Siddiqi Employment, Labour & Human Rights Lawyer, Workplace Investigator, Founder Progressive Barristers"
+      },
+      {
+        "name": "Krista Skalde",
+        "title": "Operating Partner and Chief Talent Officer",
+        "company": "Inovia Capital",
+        "raw": "Krista Skalde Operating Partner and Chief Talent Officer Inovia Capital"
+      },
+      {
+        "name": "Tiffany Smye",
+        "title": "Leadership Coach & Talent Strategist",
+        "company": "TCS Talent Consulting",
+        "raw": "Tiffany Smye Leadership Coach & Talent Strategist TCS Talent Consulting"
+      },
+      {
+        "name": "Susan Stanimirovic Rowley",
+        "title": "Head of Learning & Capability CPG",
+        "company": "Metrolinx",
+        "raw": "Susan Stanimirovic Rowley Head of Learning & Capability CPG Metrolinx"
+      },
+      {
+        "name": "Katrina Stevens",
+        "title": "VP, HR",
+        "company": "Pinchin",
+        "raw": "Katrina Stevens VP, HR Pinchin"
+      },
+      {
+        "name": "Nancy Tavares",
+        "title": "VP Head of People & Culture",
+        "company": "Paladin Security",
+        "raw": "Nancy Tavares VP Head of People & Culture Paladin Security"
+      },
+      {
+        "name": "Karen Ta",
+        "title": "Senior Manager - Partner Experience",
+        "company": "PwC",
+        "raw": "Karen Ta Senior Manager - Partner Experience PwC"
+      },
+      {
+        "name": "Simon Trevarthen",
+        "title": "CEO",
+        "company": "TRIEC ( The Toronto Region Immigrant Employment Council)",
+        "raw": "Simon Trevarthen CEO TRIEC ( The Toronto Region Immigrant Employment Council)"
+      },
+      {
+        "name": "David Whitten",
+        "title": "Partner",
+        "company": "Whitten and Lublin",
+        "raw": "David Whitten Partner Whitten and Lublin"
+      },
+      {
+        "name": "Daniel Wong",
+        "title": "Partner & Chair, Employment Law Group",
+        "company": "WeirFoulds LLP",
+        "raw": "Daniel Wong Partner & Chair, Employment Law Group WeirFoulds LLP"
+      },
+      {
+        "name": "Casey Woods",
+        "title": "Head of HR Toronto",
+        "company": "Lyft",
+        "raw": "Casey Woods Head of HR Toronto Lyft"
+      },
+      {
+        "name": "Stacey Zita",
+        "title": "Director of Settlement, International Employment Retention",
+        "company": "ThriveON",
+        "raw": "Stacey Zita Director of Settlement, International Employment Retention ThriveON"
+      },
+      {
+        "name": "Martine Lamoureux",
+        "title": "Head of Talent & Culture",
+        "company": "Ardene",
+        "raw": "Martine Lamoureux Head of Talent & Culture Ardene"
+      },
+      {
+        "name": "Margot Perlmutter",
+        "title": "Head of HR",
+        "company": "CANNEX",
+        "raw": "Margot Perlmutter Head of HR CANNEX"
+      },
+      {
+        "name": "Diondra Filicetti",
+        "title": "Founder",
+        "company": "Driven By Co",
+        "raw": "Diondra Filicetti Founder Driven By Co"
+      },
+      {
+        "name": "Agatha Suszek",
+        "title": "Senior Associate",
+        "company": "BLG",
+        "raw": "Agatha Suszek Senior Associate BLG"
+      },
+      {
+        "name": "Dario Kosarac",
+        "title": "MD & Head of Talent Operations & Rewards",
+        "company": "Canada Pension Plan Investment Board",
+        "raw": "Dario Kosarac MD & Head of Talent Operations & Rewards Canada Pension Plan Investment Board"
+      },
+      {
+        "name": "Edith Pencil",
+        "title": "Director of Employee Services",
+        "company": "Performance Auto Group",
+        "raw": "Edith Pencil Director of Employee Services Performance Auto Group"
+      },
+      {
+        "name": "Sharon Robinson",
+        "title": "Director, People & Culture",
+        "company": "Nova Scotia Pension Services Corporation",
+        "raw": "Sharon Robinson Director, People & Culture Nova Scotia Pension Services Corporation"
+      },
+      {
+        "name": "Catia Goncalves",
+        "title": "",
+        "company": "Walmart Canada",
+        "raw": "Catia Goncalves Walmart Canada"
+      },
+      {
+        "name": "Marc Belaiche",
+        "title": "President & Co-Founder",
+        "company": "Toronto Jobs",
+        "raw": "Marc Belaiche President & Co-Founder Toronto Jobs"
+      },
+      {
+        "name": "Alexandra Tillo",
+        "title": "Senior Talent Marketing Strategist-Country Marketing",
+        "company": "Indeed",
+        "raw": "Alexandra Tillo Senior Talent Marketing Strategist-Country Marketing Indeed"
+      },
+      {
+        "name": "Julie Miles",
+        "title": "Manager, Advisory Services",
+        "company": "Citation Canada",
+        "raw": "Julie Miles Manager, Advisory Services Citation Canada"
+      },
+      {
+        "name": "Stephanie Gibson",
+        "title": "Vice-President, Learning and Development - Human Resources",
+        "company": "BFL Canada",
+        "raw": "Stephanie Gibson Vice-President, Learning and Development - Human Resources BFL Canada"
+      },
+      {
+        "name": "Tania DeSa",
+        "title": "CEO",
+        "company": "Desa Global Leadership",
+        "raw": "Tania DeSa CEO Desa Global Leadership"
+      },
+      {
+        "name": "Pascale Mapleston",
+        "title": "Founder & CEO",
+        "company": "The Benefit Code",
+        "raw": "Pascale Mapleston Founder & CEO The Benefit Code"
+      },
+      {
+        "name": "Lisa Greenbaum",
+        "title": "Group Fitness Instructor",
+        "company": "GoodLife Fitness",
+        "raw": "Lisa Greenbaum Group Fitness Instructor GoodLife Fitness"
+      },
+      {
+        "name": "Aleksandra Pressey",
+        "title": "Partner",
+        "company": "Williams HR Law LLP",
+        "raw": "Aleksandra Pressey Partner Williams HR Law LLP"
+      },
+      {
+        "name": "Tonie Chaltas",
+        "title": "CEO",
+        "company": "Achev",
+        "raw": "Tonie Chaltas CEO Achev"
+      },
+      {
+        "name": "Kaley Dodds",
+        "title": "Employment & Labour Lawyer",
+        "company": "Gowling WLG",
+        "raw": "Kaley Dodds Employment & Labour Lawyer Gowling WLG"
+      },
+      {
+        "name": "Roxane Tracey",
+        "title": "Founder",
+        "company": "Fresh Paint Studio",
+        "raw": "Roxane Tracey Founder Fresh Paint Studio"
+      },
+      {
+        "name": "Vicky Li",
+        "title": "Lead Art Instructor",
+        "company": "Fresh Paint Studio",
+        "raw": "Vicky Li Lead Art Instructor Fresh Paint Studio"
+      },
+      {
+        "name": "Caitlyn Beattie",
+        "title": "Founder & CEO",
+        "company": "Origami HR",
+        "raw": "Caitlyn Beattie Founder & CEO Origami HR"
+      },
+      {
+        "name": "Ira Dubinsky",
+        "title": "Head of Product Marketing",
+        "company": "ContactMonkey",
+        "raw": "Ira Dubinsky Head of Product Marketing ContactMonkey"
+      },
+      {
+        "name": "Amine Salah",
+        "title": "Partner & Principal Consultant, AI Governance & Product",
+        "company": "AureliaOPS",
+        "raw": "Amine Salah Partner & Principal Consultant, AI Governance & Product AureliaOPS"
+      },
+      {
+        "name": "Sarah Ennor",
+        "title": "Founder",
+        "company": "Growth Counsel",
+        "raw": "Sarah Ennor Founder Growth Counsel"
+      },
+      {
+        "name": "Dr. Stephanie Fairborn ND",
+        "title": "Workplace Wellness Strategist",
+        "company": "GoodLife Fitness",
+        "raw": "Dr. Stephanie Fairborn ND Workplace Wellness Strategist GoodLife Fitness"
+      },
+      {
+        "name": "Laurie Stratton",
+        "title": "Senior Director, Client Lead Strategy & Development",
+        "company": "People Corporation",
+        "raw": "Laurie Stratton Senior Director, Client Lead Strategy & Development People Corporation"
+      },
+      {
+        "name": "Lisa Goodfellow",
+        "title": "Partner",
+        "company": "Miller Thomson LLP",
+        "raw": "Lisa Goodfellow Partner Miller Thomson LLP"
+      },
+      {
+        "name": "Lori Cassleman",
+        "title": "CEO",
+        "company": "June Health",
+        "raw": "Lori Cassleman CEO June Health"
+      },
+      {
+        "name": "Kim Spurgeon",
+        "title": "SVP, Head of Career Development & Transition, Canada",
+        "company": "LHH",
+        "raw": "Kim Spurgeon SVP, Head of Career Development & Transition, Canada LHH"
+      },
+      {
+        "name": "Lee Boudreau",
+        "title": "AVP Enterprise Learning and Development",
+        "company": "Zurich Canada",
+        "raw": "Lee Boudreau AVP Enterprise Learning and Development Zurich Canada"
+      },
+      {
+        "name": "Natalie Renton",
+        "title": "Senior Director, Programs & Services",
+        "company": "Ach\u0113v",
+        "raw": "Natalie Renton Senior Director, Programs & Services Ach\u0113v"
+      },
+      {
+        "name": "Hannah Yardley",
+        "title": "Chief People & Culture Officer",
+        "company": "Achievers",
+        "raw": "Hannah Yardley Chief People & Culture Officer Achievers"
+      },
+      {
+        "name": "Kristy Jones",
+        "title": "VP of HR",
+        "company": "Achievers",
+        "raw": "Kristy Jones VP of HR Achievers"
+      },
+      {
+        "name": "Michelle Brooks",
+        "title": "Chief People Officer & Head of Operations",
+        "company": "Security Compass",
+        "raw": "Michelle Brooks Chief People Officer & Head of Operations Security Compass"
+      },
+      {
+        "name": "Meaghen Russell",
+        "title": "Partner",
+        "company": "Dentons Canada LLP",
+        "raw": "Meaghen Russell Partner Dentons Canada LLP"
+      },
+      {
+        "name": "Sania Sanzgiri",
+        "title": "Human Resources Director",
+        "company": "Neo Performance Materials",
+        "raw": "Sania Sanzgiri Human Resources Director Neo Performance Materials"
+      },
+      {
+        "name": "Ted Bravakis, APR, FCPRS",
+        "title": "Co-founder and Partner",
+        "company": "bravacomm",
+        "raw": "Ted Bravakis, APR, FCPRS Co-founder and Partner bravacomm"
+      },
+      {
+        "name": "Vince Molinaro",
+        "title": "Founder & CEO",
+        "company": "Leadership Contract Inc.",
+        "raw": "Vince Molinaro Founder & CEO Leadership Contract Inc."
+      },
+      {
+        "name": "Nick May",
+        "title": "Senior Director, Talent Operations & Technology",
+        "company": "Wealthsimple",
+        "raw": "Nick May Senior Director, Talent Operations & Technology Wealthsimple"
+      },
+      {
+        "name": "Dr. Jason Abrams",
+        "title": "VP of Medical Affairs",
+        "company": "Medcan",
+        "raw": "Dr. Jason Abrams VP of Medical Affairs Medcan"
+      },
+      {
+        "name": "Naomi Titleman Colla",
+        "title": "Co-founder",
+        "company": "future foHRward",
+        "raw": "Naomi Titleman Colla Co-founder future foHRward"
+      },
+      {
+        "name": "Mark Edgar",
+        "title": "CPO",
+        "company": "Wajax",
+        "raw": "Mark Edgar CPO Wajax"
+      },
+      {
+        "name": "Lauren Bernardi",
+        "title": "Managing Partner & Workplace Investigator",
+        "company": "Bernardi Human Resource Law LLP",
+        "raw": "Lauren Bernardi Managing Partner & Workplace Investigator Bernardi Human Resource Law LLP"
+      },
+      {
+        "name": "Audrey Bainbridge",
+        "title": "Senior Consultant, M&A",
+        "company": "Marsh",
+        "raw": "Audrey Bainbridge Senior Consultant, M&A Marsh"
+      },
+      {
+        "name": "Adam Weitzman",
+        "title": "Enterprise Account Executive",
+        "company": "Rippling",
+        "raw": "Adam Weitzman Enterprise Account Executive Rippling"
+      },
+      {
+        "name": "Belinda Bonsu",
+        "title": "VP, HR Business Partner",
+        "company": "dentsu",
+        "raw": "Belinda Bonsu VP, HR Business Partner dentsu"
+      },
+      {
+        "name": "Siobhan Calderbank",
+        "title": "VP Talent and Belonging",
+        "company": "Element Fleet Management",
+        "raw": "Siobhan Calderbank VP Talent and Belonging Element Fleet Management"
+      },
+      {
+        "name": "Lavinia Latham",
+        "title": "Partner and Workplace Investigator",
+        "company": "Alphonse Latham LLP",
+        "raw": "Lavinia Latham Partner and Workplace Investigator Alphonse Latham LLP"
+      },
+      {
+        "name": "Shannon Bury",
+        "title": "Head of People & Culture",
+        "company": "WISE Trust Pension Plan",
+        "raw": "Shannon Bury Head of People & Culture WISE Trust Pension Plan"
+      },
+      {
+        "name": "Mark Goad",
+        "title": "General Manager",
+        "company": "Alan Canada",
+        "raw": "Mark Goad General Manager Alan Canada"
+      },
+      {
+        "name": "Kara Wilson Oliver",
+        "title": "VP, People",
+        "company": "DealMaker",
+        "raw": "Kara Wilson Oliver VP, People DealMaker"
+      },
+      {
+        "name": "Preethi Balasubramanian",
+        "title": "Business Consultant, Fractional Human Resources & Operations Executive, Author, Speaker, and Founder of Wonder EA and Wondering Pages",
+        "company": "",
+        "raw": "Preethi Balasubramanian Business Consultant, Fractional Human Resources & Operations Executive, Author, Speaker, and Founder of Wonder EA and Wondering Pages"
+      },
+      {
+        "name": "Shruti Ganeriwala, ANZ and APAC",
+        "title": "Chief HR Officer",
+        "company": "Unilever",
+        "raw": "Shruti Ganeriwala, ANZ and APAC                                                                 Chief HR Officer                                   Unilever"
+      },
+      {
+        "name": "Kathleen Wilson",
+        "title": "Executive - Leadership Capability",
+        "company": "National Australia Bank",
+        "raw": "Kathleen Wilson                                                                 Executive - Leadership Capability                                   National Australia Bank"
+      },
+      {
+        "name": "Damian Zahra",
+        "title": "Chief People Officer",
+        "company": "Bunnings",
+        "raw": "Damian Zahra                                                                 Chief People Officer                                   Bunnings"
+      },
+      {
+        "name": "Katie Wyatt",
+        "title": "Head of Diversity Equity and Inclusion (Global); AHRI\u2019s 2024 DEI Champion of the Year",
+        "company": "Bega Group",
+        "raw": "Katie Wyatt                                                                 Head of Diversity Equity and Inclusion (Global); AHRI\u2019s 2024 DEI Champion of the Year                                   Bega Group"
+      },
+      {
+        "name": "Lauren Cahill",
+        "title": "Head of People, ANZ & Global Functions",
+        "company": "Intrepid Travel",
+        "raw": "Lauren Cahill                                                                 Head of People, ANZ & Global Functions                                   Intrepid Travel"
+      },
+      {
+        "name": "Phil Wells",
+        "title": "Head of People, Development & Learning",
+        "company": "L'Oreal Group",
+        "raw": "Phil Wells                                                                 Head of People, Development & Learning                                   L'Oreal Group"
+      },
+      {
+        "name": "Joshua Cass",
+        "title": "Head of People, Flight and Safety",
+        "company": "Qantas",
+        "raw": "Joshua Cass                                                                 Head of People, Flight and Safety                                   Qantas"
+      },
+      {
+        "name": "Holly Ransom",
+        "title": "CEO & Founder",
+        "company": "Emergent Global Leadership Development",
+        "raw": "Holly Ransom                                                                 CEO & Founder                                   Emergent Global Leadership Development"
+      },
+      {
+        "name": "Pritho Saxena",
+        "title": "Director HR - Australia,China & South East Asia",
+        "company": "Amazon",
+        "raw": "Pritho Saxena                                                                 Director HR - Australia,China & South East Asia                                   Amazon"
+      }
+    ]
+  },
+  {
+    "name": "Info-tech Toronto",
+    "date": "10 Nov 2026",
+    "external_url": "https://www.infotech.com/events/toronto-live",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Gartner COO Dinner",
+    "date": "10 Nov 2026",
+    "external_url": null,
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "SAPInsider 2026 - Chicago",
+    "date": "11 Nov 2026",
+    "external_url": "https://sapinsider.org/2026-sapinsider-summit-new-orleans-event-sessions/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "SAP for Global Trade and Tax Conference 2026",
+    "date": "12 Nov 2026",
+    "external_url": "https://tradeandtax.tacinsights.events/pricing",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": [
+      {
+        "name": "Pedro De Jesus Lopes",
+        "title": "Global Program Manager for Finance",
+        "company": "Roche",
+        "raw": "Pedro De Jesus Lopes"
+      },
+      {
+        "name": "Anil Mahendra",
+        "title": "Senior Vice President",
+        "company": "Origen Technologies, Inc.",
+        "raw": "Anil Mahendra"
+      },
+      {
+        "name": "Erika Buson",
+        "title": "Product Manager",
+        "company": "SAP",
+        "raw": "Erika Buson"
+      },
+      {
+        "name": "Nicole Baranov",
+        "title": "Global Product Marketer for Tax",
+        "company": "SAP SE",
+        "raw": "Nicole Baranov"
+      },
+      {
+        "name": "Giovanni Gijsels",
+        "title": "Partner",
+        "company": "PwC",
+        "raw": "Giovanni Gijsels"
+      },
+      {
+        "name": "Peter Kopietz",
+        "title": "Senior Manager",
+        "company": "Deloitte Global",
+        "raw": "Peter Kopietz"
+      },
+      {
+        "name": "Kevin Blanc",
+        "title": "Account Director",
+        "company": "ClearTax",
+        "raw": "Kevin Blanc"
+      },
+      {
+        "name": "Roger Lindelauf",
+        "title": "Director - SAP CoE Europe",
+        "company": "Vertex E",
+        "raw": "Roger Lindelauf"
+      },
+      {
+        "name": "Luis Olivares",
+        "title": "CEO",
+        "company": "OrigenTech",
+        "raw": "Luis Olivares"
+      },
+      {
+        "name": "Sachi Alexander-Annan",
+        "title": "Head of Tax, Customer Advisory, EMEA",
+        "company": "SAP EMEA",
+        "raw": "Sachi Alexander-Annan"
+      },
+      {
+        "name": "Thomas Popp-Madsen",
+        "title": "Senior Director",
+        "company": "SAP",
+        "raw": "Thomas Popp-Madsen"
+      },
+      {
+        "name": "Sean Dononghue",
+        "title": "Senior Product Manager",
+        "company": "Sovos",
+        "raw": "Sean Dononghue"
+      },
+      {
+        "name": "Marco Van Der Veer",
+        "title": "Director Tax Technology",
+        "company": "Sovos",
+        "raw": "Marco Van Der Veer"
+      },
+      {
+        "name": "Daniel Zech",
+        "title": "Transfer Pricing Expert",
+        "company": "SAP SE",
+        "raw": "Daniel Zech"
+      },
+      {
+        "name": "Mallory Dove",
+        "title": "Senior Product Marketing Manager",
+        "company": "Sovos",
+        "raw": "Mallory Dove"
+      },
+      {
+        "name": "Achim Eisele",
+        "title": "Customs & Trade Director",
+        "company": "Amer Sports Europe Services GmbH",
+        "raw": "Achim Eisele"
+      },
+      {
+        "name": "Joanne Clark",
+        "title": "SAP Strategic Partner Lead",
+        "company": "Wolters Kluwer",
+        "raw": "Joanne Clark"
+      },
+      {
+        "name": "Jonathan Baumeler",
+        "title": "Director",
+        "company": "EY",
+        "raw": "Jonathan Baumeler"
+      },
+      {
+        "name": "Chris Lewis",
+        "title": "Partner, Indirect Tax Transformation, Tax ERP & SAP Leader UKI",
+        "company": "EY",
+        "raw": "Chris Lewis"
+      },
+      {
+        "name": "Gaspar Federico Cetun\u00e9",
+        "title": "SAP Finance Consultant  | e-Compliance Solution Architect",
+        "company": "Grundfos Holiding A/S",
+        "raw": "Gaspar Federico Cetun\u00e9"
+      },
+      {
+        "name": "Cassia Kerpel",
+        "title": "Global tax technology manager",
+        "company": "Duracell",
+        "raw": "Cassia Kerpel"
+      },
+      {
+        "name": "Gilles Poncin",
+        "title": "Director",
+        "company": "Deloitte",
+        "raw": "Gilles Poncin"
+      },
+      {
+        "name": "Laia Robres Garcia",
+        "title": "Senior Manager Product Area",
+        "company": "adidas",
+        "raw": "Laia Robres Garcia"
+      },
+      {
+        "name": "Arnaud Van De Vondel",
+        "title": "Solutions Director",
+        "company": "Archlynk",
+        "raw": "Arnaud Van De Vondel"
+      },
+      {
+        "name": "Kai Seela",
+        "title": "VP Global Trade",
+        "company": "msg systems ag",
+        "raw": "Kai Seela"
+      },
+      {
+        "name": "Carmen Vinyas",
+        "title": "Senior Manager Audit & Valuation",
+        "company": "adidas",
+        "raw": "Carmen Vinyas"
+      },
+      {
+        "name": "Olivia Pagett",
+        "title": "Project Manager",
+        "company": "TAC Insights",
+        "raw": "Olivia Pagett"
+      },
+      {
+        "name": "Jose Manuel Belmonte",
+        "title": "IT Senior System Specialist",
+        "company": "Boehringer Ingelheim",
+        "raw": "Jose Manuel Belmonte"
+      },
+      {
+        "name": "Margaux Van Respaille",
+        "title": "Trade Compliance Manager EMEAI",
+        "company": "Amcor",
+        "raw": "Margaux Van Respaille"
+      },
+      {
+        "name": "Muhammad Salam",
+        "title": "Global Partner Manager",
+        "company": "Crimson Technology Consulting",
+        "raw": "Muhammad Salam"
+      },
+      {
+        "name": "Rizwana Tahiri",
+        "title": "Partner Tax Transformation",
+        "company": "KPMG",
+        "raw": "Rizwana Tahiri"
+      },
+      {
+        "name": "Thomas Fr\u00e9n\u00e9hard",
+        "title": "Product Marketing",
+        "company": "SAP France",
+        "raw": "Thomas Fr\u00e9n\u00e9hard"
+      },
+      {
+        "name": "Prashanth Kaja",
+        "title": "Head of Customer Solutions",
+        "company": "SAP",
+        "raw": "Prashanth Kaja"
+      },
+      {
+        "name": "Pablo G. Ortega",
+        "title": "Global Commercial Manager",
+        "company": "Maersk",
+        "raw": "Pablo G. Ortega"
+      },
+      {
+        "name": "Frederik Pena-Tolivia",
+        "title": "Global Trade Executive Director for EY Europe West",
+        "company": "EY",
+        "raw": "Frederik Pena-Tolivia"
+      },
+      {
+        "name": "Rogel Mercado",
+        "title": "IT Product Line Manager - Finance and Controlling",
+        "company": "Givaudan International",
+        "raw": "Rogel Mercado"
+      },
+      {
+        "name": "Tamas K. Nagy",
+        "title": "Global Trade Affairs and Transfer Pricing Process Champion",
+        "company": "Givaudan",
+        "raw": "Tamas K. Nagy"
+      },
+      {
+        "name": "Brenda Sibindi",
+        "title": "Global Technology Manager",
+        "company": "Sony Music",
+        "raw": "Brenda Sibindi"
+      },
+      {
+        "name": "Nazar Zaidi",
+        "title": "Director of Product Management",
+        "company": "Meridian Global Services",
+        "raw": "Nazar Zaidi"
+      },
+      {
+        "name": "Emilia Dorochowicz",
+        "title": "Tax Application Specialist",
+        "company": "Robert Bosch",
+        "raw": "Emilia Dorochowicz"
+      },
+      {
+        "name": "Francisco Vellinho",
+        "title": "Process Manager",
+        "company": "Boehringer Ingelheim",
+        "raw": "Francisco Vellinho"
+      },
+      {
+        "name": "Rogelio Salazar",
+        "title": "Foreing Trade Director",
+        "company": "Grupo Salinas",
+        "raw": "Rogelio Salazar"
+      },
+      {
+        "name": "Tim Leunig",
+        "title": "Member Of The House Of Lords",
+        "company": "House of Lords",
+        "raw": "Tim Leunig"
+      },
+      {
+        "name": "Kepa Ega\u00f1a",
+        "title": "It Product Owner",
+        "company": "Roche",
+        "raw": "Kepa Ega\u00f1a"
+      },
+      {
+        "name": "Ina Vasile",
+        "title": "E-invoicing Programme Director",
+        "company": "Crimson Technology Consulting",
+        "raw": "Ina Vasile"
+      },
+      {
+        "name": "Salam Muhammad",
+        "title": "Global Partner Manager",
+        "company": "Crimson Technology Consulting",
+        "raw": "Salam Muhammad"
+      },
+      {
+        "name": "Eoghan Rogers",
+        "title": "Director of Product Management",
+        "company": "Meridian",
+        "raw": "Eoghan Rogers"
+      },
+      {
+        "name": "Andr\u00e9 Borim",
+        "title": "Co-Founder/SAP Director",
+        "company": "B&B Enterprise Solutions",
+        "raw": "Andr\u00e9 Borim"
+      },
+      {
+        "name": "Thomas Bilger",
+        "title": "Chapter Head Customer Operations & Trade",
+        "company": "Syngenta",
+        "raw": "Thomas Bilger"
+      }
+    ]
+  },
+  {
+    "name": "Government Innovation New York- Public Sector Network",
+    "date": "12 Nov 2026",
+    "external_url": "https://publicsectornetwork.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": [
+      {
+        "name": "Amanda Crawford",
+        "title": "Texas Department of Information Resources",
+        "company": "",
+        "raw": "Anytime that we can come together in the public sector to be able to commiserate, to laugh, to celebrate some of both the challenges and the wins, that\u2019s a tremendous benefit.  Amanda Crawford Texas Department of Information Resources"
+      },
+      {
+        "name": "Chris Fechner",
+        "title": "Digital Transformation Agency",
+        "company": "",
+        "raw": "We partner with PSN largely on the basis that we\u2019ve got really good opportunities to bring messages to a large number of public servants\u2026 we can follow up with the 200 agencies and the 200,000 public servants that we really want to reach out to.  Chris Fechner Digital Transformation Agency"
+      }
+    ]
+  },
+  {
+    "name": "Washington Digital Government Summit",
+    "date": "12 Nov 2026",
+    "external_url": "https://events.govtech.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Beyond the Black - Americas",
+    "date": "16 Nov 2026",
+    "external_url": null,
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Thomson Reuters Synergy Conference",
+    "date": "16 Nov 2026",
+    "external_url": "https://www.thomsonreuters.com/en/synergy",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Finance & Accounting Technology Expo (FATE)",
+    "date": "17 Nov 2026",
+    "external_url": "https://financeaccountingtech.com/expo/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": [
+      {
+        "name": "Barbara Corcoran",
+        "title": "Shark on ABC\u2019s Shark Tank, Motivational Speaker, Executive Coach, Podcast Host, Author, Founder of The Corcoran Group",
+        "company": "Shark on ABC\u2019s Shark Tank, Motivational Speaker, Executive Coach, Podcast Host, Author, Founder of The Corcoran Group",
+        "raw": "Barbara Corcoran Shark on ABC\u2019s Shark Tank, Motivational Speaker, Executive Coach, Podcast Host, Author, Founder of The Corcoran Group"
+      },
+      {
+        "name": "Jagan Reddy",
+        "title": "Founder, CEO, RightRev",
+        "company": "Founder, CEO, RightRev",
+        "raw": "Jagan Reddy\t\t\t\t\t\t \t\t\t\t\t\t\tFounder, CEO, RightRev"
+      },
+      {
+        "name": "Tracy Kantrowitz",
+        "title": "VP, GTM, North America, Agicap",
+        "company": "VP, GTM, North America, Agicap",
+        "raw": "Tracy Kantrowitz\t\t\t\t\t\t \t\t\t\t\t\t\tVP, GTM, North America, Agicap"
+      },
+      {
+        "name": "Rory Parness",
+        "title": "CFO, Niche",
+        "company": "CFO, Niche",
+        "raw": "Rory Parness\t\t\t\t\t\t \t\t\t\t\t\t\tCFO, Niche"
+      },
+      {
+        "name": "Brad Starks",
+        "title": "Product Marketing Director, SAP Concur",
+        "company": "Product Marketing Director, SAP Concur",
+        "raw": "Brad Starks\t\t\t\t\t\t \t\t\t\t\t\t\tProduct Marketing Director, SAP Concur"
+      },
+      {
+        "name": "Kirk Kappelhoff",
+        "title": "Senior Director of Strategic Finance, Drivetrain",
+        "company": "Senior Director of Strategic Finance, Drivetrain",
+        "raw": "Kirk Kappelhoff\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Director of Strategic Finance, Drivetrain"
+      },
+      {
+        "name": "Steve Casey",
+        "title": "Vice President, Global Finance & Accounting Solutions, Personiv, an eClerx division",
+        "company": "Vice President, Global Finance & Accounting Solutions, Personiv, an eClerx division",
+        "raw": "Steve Casey\t\t\t\t\t\t \t\t\t\t\t\t\tVice President, Global Finance & Accounting Solutions, Personiv, an eClerx division"
+      },
+      {
+        "name": "Jennifer Santos",
+        "title": "Chief Marketing Officer, D&V Philippines",
+        "company": "Chief Marketing Officer, D&V Philippines",
+        "raw": "Jennifer Santos\t\t\t\t\t\t \t\t\t\t\t\t\tChief Marketing Officer, D&V Philippines"
+      },
+      {
+        "name": "Tom Ruello",
+        "title": "VP of GTM, SpendHound",
+        "company": "VP of GTM, SpendHound",
+        "raw": "Tom Ruello\t\t\t\t\t\t \t\t\t\t\t\t\tVP of GTM, SpendHound"
+      },
+      {
+        "name": "Darrell Cox",
+        "title": "Chief Financial Officer, Una AI",
+        "company": "Chief Financial Officer, Una AI",
+        "raw": "Darrell Cox\t\t\t\t\t\t \t\t\t\t\t\t\tChief Financial Officer, Una AI"
+      },
+      {
+        "name": "James Catliff",
+        "title": "Lead, Product Consulting, FISPAN",
+        "company": "Lead, Product Consulting, FISPAN",
+        "raw": "James Catliff\t\t\t\t\t\t \t\t\t\t\t\t\tLead, Product Consulting, FISPAN"
+      },
+      {
+        "name": "Dave Kargman",
+        "title": "VP Solution Advisory \u2013 Cloud ERP / Finance, SAP Americas, Inc",
+        "company": "VP Solution Advisory \u2013 Cloud ERP / Finance, SAP Americas, Inc",
+        "raw": "Dave Kargman\t\t\t\t\t\t \t\t\t\t\t\t\tVP Solution Advisory \u2013 Cloud ERP / Finance, SAP Americas, Inc"
+      },
+      {
+        "name": "Anshuman Yadav",
+        "title": "Founder & CEO, NeuraCraft",
+        "company": "Founder & CEO, NeuraCraft",
+        "raw": "Anshuman Yadav\t\t\t\t\t\t \t\t\t\t\t\t\tFounder & CEO, NeuraCraft"
+      },
+      {
+        "name": "JC Franzen",
+        "title": "Director of Product Management, BILL",
+        "company": "Director of Product Management, BILL",
+        "raw": "JC Franzen\t\t\t\t\t\t \t\t\t\t\t\t\tDirector of Product Management, BILL"
+      },
+      {
+        "name": "Brian Reid",
+        "title": "Managing Director, RESPEC",
+        "company": "Managing Director, RESPEC",
+        "raw": "Brian Reid\t\t\t\t\t\t \t\t\t\t\t\t\tManaging Director, RESPEC"
+      },
+      {
+        "name": "Kaushik Venkatraman",
+        "title": "Co-Founder & Head of Product, Consarc.ai",
+        "company": "Co-Founder & Head of Product, Consarc.ai",
+        "raw": "Kaushik Venkatraman\t\t\t\t\t\t \t\t\t\t\t\t\tCo-Founder & Head of Product, Consarc.ai"
+      },
+      {
+        "name": "Alastair Moore",
+        "title": "Senior Product Marketing Manager, Yooz",
+        "company": "Senior Product Marketing Manager, Yooz",
+        "raw": "Alastair Moore\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Product Marketing Manager, Yooz"
+      },
+      {
+        "name": "Emelie Smith",
+        "title": "ERP Strategist, Unit4",
+        "company": "ERP Strategist, Unit4",
+        "raw": "Emelie Smith\t\t\t\t\t\t \t\t\t\t\t\t\tERP Strategist, Unit4"
+      },
+      {
+        "name": "Michael Stiller",
+        "title": "New Initiatives, Nasdaq",
+        "company": "New Initiatives, Nasdaq",
+        "raw": "Michael Stiller\t\t\t\t\t\t \t\t\t\t\t\t\tNew Initiatives, Nasdaq"
+      },
+      {
+        "name": "Keynote Panelists",
+        "title": "USA Olympic Fencing Team",
+        "company": "USA Olympic Fencing Team",
+        "raw": "Keynote Panelists USA Olympic Fencing Team"
+      },
+      {
+        "name": "Ken Anderson",
+        "title": "VP Sales, North America, Serrala",
+        "company": "VP Sales, North America, Serrala",
+        "raw": "Ken Anderson\t\t\t\t\t\t \t\t\t\t\t\t\tVP Sales, North America, Serrala"
+      },
+      {
+        "name": "Yogi Goel",
+        "title": "Co-founder, CEO & CFO, Maxima",
+        "company": "Co-founder, CEO & CFO, Maxima",
+        "raw": "Yogi Goel\t\t\t\t\t\t \t\t\t\t\t\t\tCo-founder, CEO & CFO, Maxima"
+      },
+      {
+        "name": "Amy Konary",
+        "title": "SVP & Founder of Zuora\u2019s Subscribed Institute, Zuora",
+        "company": "SVP & Founder of Zuora\u2019s Subscribed Institute, Zuora",
+        "raw": "Amy Konary\t\t\t\t\t\t \t\t\t\t\t\t\tSVP & Founder of Zuora\u2019s Subscribed Institute, Zuora"
+      },
+      {
+        "name": "Apurv Bansal",
+        "title": "Co-founder & CEO, Zenskar",
+        "company": "Co-founder & CEO, Zenskar",
+        "raw": "Apurv Bansal\t\t\t\t\t\t \t\t\t\t\t\t\tCo-founder & CEO, Zenskar"
+      },
+      {
+        "name": "Tom Kelly",
+        "title": "Sr. Director Product Marketing/Management, Oracle NetSuite",
+        "company": "Sr. Director Product Marketing/Management, Oracle NetSuite",
+        "raw": "Tom Kelly\t\t\t\t\t\t \t\t\t\t\t\t\tSr. Director Product Marketing/Management, Oracle NetSuite"
+      },
+      {
+        "name": "Davida Lara",
+        "title": "Executive Vice President, Payroll, Entertainment Partners",
+        "company": "Executive Vice President, Payroll, Entertainment Partners",
+        "raw": "Davida Lara\t\t\t\t\t\t \t\t\t\t\t\t\tExecutive Vice President, Payroll, Entertainment Partners"
+      },
+      {
+        "name": "Michael Pacifico",
+        "title": "Director of AI & Automation, Armanino",
+        "company": "Director of AI & Automation, Armanino",
+        "raw": "Michael Pacifico\t\t\t\t\t\t \t\t\t\t\t\t\tDirector of AI & Automation, Armanino"
+      },
+      {
+        "name": "Shannon Kaiser",
+        "title": "General Manager, Summit",
+        "company": "General Manager, Summit",
+        "raw": "Shannon Kaiser\t\t\t\t\t\t \t\t\t\t\t\t\tGeneral Manager, Summit"
+      },
+      {
+        "name": "Christina Ross",
+        "title": "CEO & Founder, Cube",
+        "company": "CEO & Founder, Cube",
+        "raw": "Christina Ross\t\t\t\t\t\t \t\t\t\t\t\t\tCEO & Founder, Cube"
+      },
+      {
+        "name": "Bo Hamerick",
+        "title": "Director Of Sales, Avidxchange",
+        "company": "Director Of Sales, Avidxchange",
+        "raw": "Bo Hamerick\t\t\t\t\t\t \t\t\t\t\t\t\tDirector Of Sales, Avidxchange"
+      },
+      {
+        "name": "Shoma Sinha",
+        "title": "Founder and Principal Advisor, Vikaraa",
+        "company": "Founder and Principal Advisor, Vikaraa",
+        "raw": "Shoma Sinha\t\t\t\t\t\t \t\t\t\t\t\t\tFounder and Principal Advisor, Vikaraa"
+      },
+      {
+        "name": "Chris Millet",
+        "title": "Managing Director, Digital Advisory Services \u2013 NetSuite, Baker Tilly",
+        "company": "Managing Director, Digital Advisory Services \u2013 NetSuite, Baker Tilly",
+        "raw": "Chris Millet\t\t\t\t\t\t \t\t\t\t\t\t\tManaging Director, Digital Advisory Services \u2013 NetSuite, Baker Tilly"
+      },
+      {
+        "name": "Mark Trimble",
+        "title": "Manager, Sales, Procurify",
+        "company": "Manager, Sales, Procurify",
+        "raw": "Mark Trimble\t\t\t\t\t\t \t\t\t\t\t\t\tManager, Sales, Procurify"
+      },
+      {
+        "name": "Rowan Tonkin",
+        "title": "Chief Marketing Officer, Planful",
+        "company": "Chief Marketing Officer, Planful",
+        "raw": "Rowan Tonkin\t\t\t\t\t\t \t\t\t\t\t\t\tChief Marketing Officer, Planful"
+      },
+      {
+        "name": "Boris Yampolsky",
+        "title": "Senior Director of Sales, PEX",
+        "company": "Senior Director of Sales, PEX",
+        "raw": "Boris Yampolsky\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Director of Sales, PEX"
+      },
+      {
+        "name": "Jodi Bergman",
+        "title": "Sr. Director, Product Management, Versapay",
+        "company": "Sr. Director, Product Management, Versapay",
+        "raw": "Jodi Bergman\t\t\t\t\t\t \t\t\t\t\t\t\tSr. Director, Product Management, Versapay"
+      },
+      {
+        "name": "Josh Aharonoff",
+        "title": "Fractional CFO, Your CFO Guy",
+        "company": "Fractional CFO, Your CFO Guy",
+        "raw": "Josh Aharonoff\t\t\t\t\t\t \t\t\t\t\t\t\tFractional CFO, Your CFO Guy"
+      },
+      {
+        "name": "Jeff Alley",
+        "title": "Head of Product, Lensing",
+        "company": "Head of Product, Lensing",
+        "raw": "Jeff Alley\t\t\t\t\t\t \t\t\t\t\t\t\tHead of Product, Lensing"
+      },
+      {
+        "name": "Michael Galanos",
+        "title": "Head of Business Development, Eftsure",
+        "company": "Head of Business Development, Eftsure",
+        "raw": "Michael Galanos\t\t\t\t\t\t \t\t\t\t\t\t\tHead of Business Development, Eftsure"
+      },
+      {
+        "name": "Mike Rosenbaum",
+        "title": "Presales Director, Datarails",
+        "company": "Presales Director, Datarails",
+        "raw": "Mike Rosenbaum\t\t\t\t\t\t \t\t\t\t\t\t\tPresales Director, Datarails"
+      },
+      {
+        "name": "Tyler Palmerton",
+        "title": "Client Advisory Partnerships, Expensify",
+        "company": "Client Advisory Partnerships, Expensify",
+        "raw": "Tyler Palmerton\t\t\t\t\t\t \t\t\t\t\t\t\tClient Advisory Partnerships, Expensify"
+      },
+      {
+        "name": "Kevin Avila",
+        "title": "Senior Solutions Architect, Microsoft",
+        "company": "Senior Solutions Architect, Microsoft",
+        "raw": "Kevin Avila\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Solutions Architect, Microsoft"
+      },
+      {
+        "name": "Mike Cordova",
+        "title": "Chief Financial Officer, Anvil Corporation",
+        "company": "Chief Financial Officer, Anvil Corporation",
+        "raw": "Mike Cordova\t\t\t\t\t\t \t\t\t\t\t\t\tChief Financial Officer, Anvil Corporation"
+      },
+      {
+        "name": "Luke Havens",
+        "title": "Senior Solutions Consultant, Trintech",
+        "company": "Senior Solutions Consultant, Trintech",
+        "raw": "Luke Havens\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Solutions Consultant, Trintech"
+      },
+      {
+        "name": "Albert Gozzi",
+        "title": "Co-Founder & CEO, Aleph",
+        "company": "Co-Founder & CEO, Aleph",
+        "raw": "Albert Gozzi\t\t\t\t\t\t \t\t\t\t\t\t\tCo-Founder & CEO, Aleph"
+      },
+      {
+        "name": "Amy Ma",
+        "title": "Staff Product Manager, Perk",
+        "company": "Staff Product Manager, Perk",
+        "raw": "Amy Ma\t\t\t\t\t\t \t\t\t\t\t\t\tStaff Product Manager, Perk"
+      },
+      {
+        "name": "Jeff Feuerstein",
+        "title": "Senior Vice President of Paymode Product Management and Market Strategy, Bottomline",
+        "company": "Senior Vice President of Paymode Product Management and Market Strategy, Bottomline",
+        "raw": "Jeff Feuerstein\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Vice President of Paymode Product Management and Market Strategy, Bottomline"
+      },
+      {
+        "name": "Guy Bar-Gil",
+        "title": "CEO and Co-Founder, Safebooks",
+        "company": "CEO and Co-Founder, Safebooks",
+        "raw": "Guy Bar-Gil\t\t\t\t\t\t \t\t\t\t\t\t\tCEO and Co-Founder, Safebooks"
+      },
+      {
+        "name": "Jason Powell",
+        "title": "Managing Director of Enterprise Transformation, Zip",
+        "company": "Managing Director of Enterprise Transformation, Zip",
+        "raw": "Jason Powell\t\t\t\t\t\t \t\t\t\t\t\t\tManaging Director of Enterprise Transformation, Zip"
+      },
+      {
+        "name": "Sarah Elix",
+        "title": "Account Executive, Truewind",
+        "company": "Account Executive, Truewind",
+        "raw": "Sarah Elix\t\t\t\t\t\t \t\t\t\t\t\t\tAccount Executive, Truewind"
+      },
+      {
+        "name": "Kelly Kauffman",
+        "title": "Chief Financial Officer, Associated Wholesale Grocers, Inc.",
+        "company": "Chief Financial Officer, Associated Wholesale Grocers, Inc.",
+        "raw": "Kelly Kauffman\t\t\t\t\t\t \t\t\t\t\t\t\tChief Financial Officer, Associated Wholesale Grocers, Inc."
+      },
+      {
+        "name": "Warwick Leitch",
+        "title": "Director, Product Management, insightsoftware",
+        "company": "Director, Product Management, insightsoftware",
+        "raw": "Warwick Leitch\t\t\t\t\t\t \t\t\t\t\t\t\tDirector, Product Management, insightsoftware"
+      },
+      {
+        "name": "Matthew Morookian",
+        "title": "Senior Director, Product Marke5ng, apexanaly5x",
+        "company": "Senior Director, Product Marke5ng, apexanaly5x",
+        "raw": "Matthew Morookian\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Director, Product Marke5ng, apexanaly5x"
+      },
+      {
+        "name": "Saurabh Chauhan",
+        "title": "Founder & CEO, Peakflo",
+        "company": "Founder & CEO, Peakflo",
+        "raw": "Saurabh Chauhan\t\t\t\t\t\t \t\t\t\t\t\t\tFounder & CEO, Peakflo"
+      },
+      {
+        "name": "Tarek Alaruri",
+        "title": "CEO, Stuut",
+        "company": "CEO, Stuut",
+        "raw": "Tarek Alaruri\t\t\t\t\t\t \t\t\t\t\t\t\tCEO, Stuut"
+      },
+      {
+        "name": "Yaara Hendel",
+        "title": "VP of Product Management, Nominal",
+        "company": "VP of Product Management, Nominal",
+        "raw": "Yaara Hendel\t\t\t\t\t\t \t\t\t\t\t\t\tVP of Product Management, Nominal"
+      },
+      {
+        "name": "Sam Vaughn",
+        "title": "Director, Rippling Finance, Rippling",
+        "company": "Director, Rippling Finance, Rippling",
+        "raw": "Sam Vaughn\t\t\t\t\t\t \t\t\t\t\t\t\tDirector, Rippling Finance, Rippling"
+      },
+      {
+        "name": "Eric Sleeth",
+        "title": "Sr Growth Manager, Software & SaaS, North America, Sage Software",
+        "company": "Sr Growth Manager, Software & SaaS, North America, Sage Software",
+        "raw": "Eric Sleeth\t\t\t\t\t\t \t\t\t\t\t\t\tSr Growth Manager, Software & SaaS, North America, Sage Software"
+      },
+      {
+        "name": "Ravi Malhotra",
+        "title": "Vice President, Heartbeam",
+        "company": "Vice President, Heartbeam",
+        "raw": "Ravi Malhotra\t\t\t\t\t\t \t\t\t\t\t\t\tVice President, Heartbeam"
+      },
+      {
+        "name": "Jamie Hess",
+        "title": "Keynote and TEDx Speaker, Media Personality, Podcaster, and Professional Development Coach",
+        "company": "Keynote and TEDx Speaker, Media Personality, Podcaster, and Professional Development Coach",
+        "raw": "Jamie Hess Keynote and TEDx Speaker, Media Personality, Podcaster, and Professional Development Coach"
+      },
+      {
+        "name": "Keynote Panel",
+        "title": "-",
+        "company": "-",
+        "raw": "Keynote Panel\t\t\t\t\t\t \t\t\t\t\t\t\t-"
+      },
+      {
+        "name": "David Crowell",
+        "title": "Partner, PwC",
+        "company": "Partner, PwC",
+        "raw": "David Crowell\t\t\t\t\t\t \t\t\t\t\t\t\tPartner, PwC"
+      },
+      {
+        "name": "Ryan Brown",
+        "title": "Products Director, Digital Advisory Services, Baker Tilly",
+        "company": "Products Director, Digital Advisory Services, Baker Tilly",
+        "raw": "Ryan Brown\t\t\t\t\t\t \t\t\t\t\t\t\tProducts Director, Digital Advisory Services, Baker Tilly"
+      },
+      {
+        "name": "Kate Daniels",
+        "title": "Director, Head of Partnership Alliances, Oracle NetSuite",
+        "company": "Director, Head of Partnership Alliances, Oracle NetSuite",
+        "raw": "Kate Daniels\t\t\t\t\t\t \t\t\t\t\t\t\tDirector, Head of Partnership Alliances, Oracle NetSuite"
+      },
+      {
+        "name": "Nick Corradino, CPA",
+        "title": "Senior Manager, Solutions Consulting, Tipalti",
+        "company": "Senior Manager, Solutions Consulting, Tipalti",
+        "raw": "Nick Corradino, CPA\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Manager, Solutions Consulting, Tipalti"
+      },
+      {
+        "name": "John Colthart",
+        "title": "Chief Product Officer, Una AI",
+        "company": "Chief Product Officer, Una AI",
+        "raw": "John Colthart\t\t\t\t\t\t \t\t\t\t\t\t\tChief Product Officer, Una AI"
+      },
+      {
+        "name": "Sam Sachs",
+        "title": "Account Executive, Nominal",
+        "company": "Account Executive, Nominal",
+        "raw": "Sam Sachs\t\t\t\t\t\t \t\t\t\t\t\t\tAccount Executive, Nominal"
+      },
+      {
+        "name": "Leah Huey, AAP",
+        "title": "Director of ACH Network Development, Nacha",
+        "company": "Director of ACH Network Development, Nacha",
+        "raw": "Leah Huey, AAP\t\t\t\t\t\t \t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\tDirector of ACH Network Development, Nacha\t\t\t\t\t\t \t\t\t\t\t \t\t\t\t \t\t\t\t\t\t\t\t \t\t\t\t\t\t\tCharles Ellert\t\t\t\t\t\t \t\t\t\t\t\t\tAssociate Managing Director, ACH Network Development, Nacha"
+      },
+      {
+        "name": "Charles Ellert",
+        "title": "Associate Managing Director, ACH Network Development, Nacha",
+        "company": "Associate Managing Director, ACH Network Development, Nacha",
+        "raw": "Charles Ellert\t\t\t\t\t\t \t\t\t\t\t\t\tAssociate Managing Director, ACH Network Development, Nacha"
+      },
+      {
+        "name": "John Van Puffelen",
+        "title": "Senior Director, Workday Finance Transformation, PwC",
+        "company": "Senior Director, Workday Finance Transformation, PwC",
+        "raw": "John Van Puffelen\t\t\t\t\t\t \t\t\t\t\t\t\tSenior Director, Workday Finance Transformation, PwC"
+      },
+      {
+        "name": "William Lutz",
+        "title": "AI and Emerging Technology Strategist, Oracle",
+        "company": "AI and Emerging Technology Strategist, Oracle",
+        "raw": "William Lutz\t\t\t\t\t\t \t\t\t\t\t\t\tAI and Emerging Technology Strategist, Oracle"
+      },
+      {
+        "name": "James Gray",
+        "title": "Chief Revenue Officer, IANAI Systems Inc.",
+        "company": "Chief Revenue Officer, IANAI Systems Inc.",
+        "raw": "James Gray\t\t\t\t\t\t \t\t\t\t\t\t\tChief Revenue Officer, IANAI Systems Inc."
+      },
+      {
+        "name": "Arty Akhtenberg",
+        "title": "Director, Strategic Finance, Brex",
+        "company": "Director, Strategic Finance, Brex",
+        "raw": "Arty Akhtenberg\t\t\t\t\t\t \t\t\t\t\t\t\tDirector, Strategic Finance, Brex"
+      },
+      {
+        "name": "Siva Rajamani",
+        "title": "Co-founder and CEO, Everstage",
+        "company": "Co-founder and CEO, Everstage",
+        "raw": "Siva Rajamani\t\t\t\t\t\t \t\t\t\t\t\t\tCo-founder and CEO, Everstage"
+      },
+      {
+        "name": "George Fullerton",
+        "title": "Head of GTM, Basis",
+        "company": "Head of GTM, Basis",
+        "raw": "George Fullerton\t\t\t\t\t\t \t\t\t\t\t\t\tHead of GTM, Basis"
+      },
+      {
+        "name": "Pushkar Agrawal",
+        "title": "Chartered Accountant",
+        "company": "Chartered Accountant",
+        "raw": "Pushkar Agrawal\t\t\t\t\t\t \t\t\t\t\t\t\tChartered Accountant"
+      },
+      {
+        "name": "Dan Cnossen",
+        "title": "Paralympic Athlete, Motivational Speaker and Former Navy SEAL",
+        "company": "Paralympic Athlete, Motivational Speaker and Former Navy SEAL",
+        "raw": "Dan Cnossen\t\t\t\t\t\t \t\t\t\t\t\t\tParalympic Athlete, Motivational Speaker and Former Navy SEAL"
+      }
+    ]
+  },
+  {
+    "name": "Finance Alliance CFO Summit",
+    "date": "17 Nov 2026",
+    "external_url": null,
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "HMG Strategy Summit - Austin",
+    "date": "17 Nov 2026",
+    "external_url": "https://web.cvent.com/event/265c3a5a-5b20-4ce0-9886-355364d47237/summary?environment=P2",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Illinois Digital Government Summit",
+    "date": "17 Nov 2026",
+    "external_url": "https://events.govtech.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "NISCL 2026 Awards",
+    "date": "19 Nov 2026",
+    "external_url": null,
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "City Summit 2026",
+    "date": "19 Nov 2026",
+    "external_url": "https://www.nlc.org/events/city-summit-2026/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "HMG Strategy Summit - Houston",
+    "date": "19 Nov 2026",
+    "external_url": "https://web.cvent.com/event/d5e652a5-2ccc-4f85-b147-05031c3aa8b0/summary?environment=P2",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Texas IT Leadership Forum Digital Government Summit",
+    "date": "19 Nov 2026",
+    "external_url": "https://events.govtech.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "HMG Strategy Summit - Toronto",
+    "date": "24 Nov 2026",
+    "external_url": "https://web.cvent.com/event/cc6022b6-4163-4303-90fd-d0a34559513c/summary?environment=P2",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "HMG Strategy Summit - Nashville",
+    "date": "01 Dec 2026",
+    "external_url": null,
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Wisconsin Digital Government Summit",
+    "date": "03 Dec 2026",
+    "external_url": "https://events.govtech.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "American Aerospace & Defense Summit 2026",
+    "date": "03 Dec 2026",
+    "external_url": "https://aadsummit.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": [
+      {
+        "name": "Peter Lengyel",
+        "title": "President and CEO",
+        "company": "",
+        "raw": "Peter Lengyel"
+      },
+      {
+        "name": "Marc Fischer, Ph.D.",
+        "title": "SVP, Engineering, Cabin and Cargo Engineering",
+        "company": "",
+        "raw": "Marc Fischer, Ph.D."
+      },
+      {
+        "name": "Joe Miller",
+        "title": "President, Government Operations",
+        "company": "",
+        "raw": "Joe Miller"
+      },
+      {
+        "name": "John Baylouny",
+        "title": "EVP and COO",
+        "company": "",
+        "raw": "John Baylouny"
+      },
+      {
+        "name": "Annabel Flores",
+        "title": "Deputy President, Land and Air Defense Systems",
+        "company": "",
+        "raw": "Annabel Flores"
+      },
+      {
+        "name": "Scott Alexander",
+        "title": "President, Missile Solutions",
+        "company": "",
+        "raw": "Scott Alexander"
+      }
+    ]
+  },
+  {
+    "name": "CDM Media CFO Philadelphia Dinner",
+    "date": "03 Dec 2026",
+    "external_url": null,
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "International Maintenance Conference (IMC)",
+    "date": "07 Dec 2026",
+    "external_url": null,
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "CDM Media CFO Summit New York City",
+    "date": "08 Dec 2026",
+    "external_url": "https://events.cdmmedia.com/event/7800f94f-60b0-481d-ad58-db0c535a3c9a/register",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "CDM Media CFO Dinner New York City",
+    "date": "08 Dec 2026",
+    "external_url": "https://events.cdmmedia.com/event/3d438416-c1db-423e-86c3-43640d0575c4/register?RefID=mktg-a-sapvip",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Pennsylvania Digital Government Summit",
+    "date": "10 Dec 2026",
+    "external_url": "https://events.govtech.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "Nevada Digital Government Summit",
+    "date": "10 Dec 2026",
+    "external_url": "https://events.govtech.com/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "HMG Strategy Summit - NY GIS",
+    "date": "16 Dec 2026",
+    "external_url": "https://web.cvent.com/event/afc2aa1b-3d09-43fa-aa59-071981bb1602/summary?environment=P2",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  },
+  {
+    "name": "World Economic Forum Annual Meeting Davos",
+    "date": "18 Jan 2027",
+    "external_url": "https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": [
+      {
+        "name": "World Economic Forum",
+        "title": "",
+        "company": "",
+        "raw": "World Economic Forum"
+      }
+    ]
+  },
+  {
+    "name": "Munich Security Conference 2026",
+    "date": "11 Feb 2027",
+    "external_url": "https://securityconference.org/en/",
+    "contact_name": "",
+    "contact_email": "",
+    "speakers": []
+  }
+]
